@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {font-family: 'Roboto', sans-serif !important; scroll-behavior: smooth;}
+i {font-family: "Font Awesome 5 Brands" !important;}
+:root {
+  --darkMain: #303236;
+  --darkScnd: #3c3e41;
+  --lightMain: #fffefc;
+  --lightScnd: #d9d9d9;
+  --yellow: #f4a328;
+}
+.container { max-width: 1024px; margin: auto; }
+.darkMain {background-color: var(--darkMain); color: var(--lightMain);}
+.lightMain {background-color: var(--lightMain); color: var(--darkMain);}
+.darkScnd {background-color: var(--darkScnd); color: var(--lightMain);}
+.lightScnd {background-color: var(--lightScnd); color: var(--darkMain);}
+
+#progressbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--yellow);
+}
+#toTop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  color: var(--yellow);
+  box-shadow: 0 0 20px -3px #000;
+  cursor: pointer;
+  background-image: url('img/arrow-up-solid.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  transition: opacity 1s ease;
+}
+main section {
+  padding: 100px 0;
+}
+.secTitle {
+  margin: 0 0 100px 0;
+  text-align: center;
+}
+.secTitle h4 {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.secTitle h4::before, .secTitle h4::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 13px;
+  background: url('img/chevron-up-solid.svg');
+  margin: 0 5px;
+}
+.secTitle h4::after {transform: scaleX(-1);}
+.secTitle h4 span {
+  padding: 5px 10px;
+  background: var(--yellow);
+  color: #000;
+}
+
+                                                                        /* THEME */
+#theme {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+#theme h1 {
+  font-size: 1.3em;
+  margin: 0 auto 50px;
+}
+#dark_wrap h1 {color: var(--lightScnd);}
+#light_wrap h1 {color: var(--darkScnd);}
+.col_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+#light_wrap { background-color: var(--lightMain); }
+#dark_wrap { background-color: var(--darkScnd); }
+.col_wrap>div {
+  text-align: center;
+  width: 60%;
+  cursor: pointer;
+}
+.col_wrap>div:hover img {
+  transform: scale(1.1);
+  /* box-shadow: 0 0 20px #000; */
+  box-shadow: 0px 10px 25px 2px rgba(0, 0, 0, .6);
+}
+.col_wrap>div img {
+  width: 100%;
+  box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, .6);
+  transition: transform .7s ease, box-shadow .7s ease;
+}
+/* #my-body {display: none;} */
+
+                                                                        /* ANIMATITON */
+
+#title_img._anim-items {
+  transform: scale(0);
+}
+#title_img._anim-items._active {
+  transform: scale(1);
+}
+header ._anim-items, .secTitle._anim-items {
+  transform: translate(0, 140%);
+  opacity: 0;
+}
+header ._anim-items._active, .secTitle._active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform .8s ease 0s, opacity .8s ease 0s;
+}
+#title_text span._active {transition: transform .8s ease .4s, opacity .8s ease .4s;}
+#title_text h3._active {transition: transform .8s ease .4s, opacity .8s ease .7s;}
+#title_text p._active {transition: transform .8s ease .4s, opacity .8s ease 1s;}
+
+                                                                        /* HEADER */
+
+
+header {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(0deg, rgba(97, 97, 97, .7), rgba(97, 97, 97, .7)), url('img/header-bg.jpg') center/cover no-repeat;
+}
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+  background: transparent;
+  transition: background .5s linear, box-shadow .5s linear;
+}
+#logo a {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--yellow);
+}
+header ul { display: flex; }
+header ul a {
+  color: var(--lightMain);
+  padding: 5px 10px;
+  position: relative;
+}
+header ul a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -28px;
+  transform: scaleX(0);
+  height: 3px;
+  width: 100%;
+  background-color: var(--yellow);
+  border-radius: 5px;
+  transition: transform .5s ease;
+}
+header ul a:hover::after, header ul a.active::after { transform: scaleX(1); }
+header ul a.active { color: var(--yellow); }
+#title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+}
+#title_text>* { margin: 10px 0; }
+#title_text span {
+  display: inline-block;
+  padding: 5px 20px;
+  background: var(--yellow);
+  border-radius: 20px 20px 20px 0;
+}
+#title h3 {
+  font-size: 2em;
+  font-weight: 700;
+}
+#title p { font-size: 1.3em; }
+#title_img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 30px 0 0;
+  background: linear-gradient(0deg, rgba(97, 97, 97, .3), rgba(97, 97, 97, .3)), url('img/mee.jpg') left/cover no-repeat;
+}
+                                                                        /* ABOUT */
+
+#story {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+#summary {line-height: 1.5em;}
+#summary a {
+  position: relative;
+  display: inline-block;
+  margin: 50px 0 0;
+  padding: 10px 15px 10px 40px;
+  transition: background .5s ease;
+}
+#summary a:hover {background: var(--yellow);}
+#summary a::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  display: inline-block;
+  background: url('img/download-solid.svg') no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+                                                                        /* Skills */
+
+#mainSkills {
+  display: flex;
+  margin: 0 0 50px 0;
+}                                                                        
+#mainSkills>div {
+  width: 50%;
+} 
+#progressSkill {
+  padding: 0 30px;
+}
+#progressSkill i {font-size: 1.5em;}
+#progressSkill h5 {
+  margin: 30px 5px 10px;
+}
+#progressSkill h5 span {
+  vertical-align: text-top;
+}
+.progress {
+  position: relative;
+  width: 80%;
+  height: 15px;
+  background: #000;
+  border-radius: 20px;
+} 
+.progress span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: inline-block;
+  height: 5px;
+  background: var(--yellow);
+  border-radius: 20px;
+  width: 0%;
+  transition: width 1s ease;
+}                                                              
+#ringWrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 30px 0;
+}
+#ringWrap>div {
+  width: 50%;
+  margin: 10px 0;
+}
+#ringWrap h5 {
+  margin: 5px;
+  text-align: center;
+}
+#ringWrap svg {
+  width: 115px;
+  height: 115px;
+}
+.progressRing {
+  position: relative;
+  text-align: center;
+}
+.progressRing span {
+  position: absolute;
+  left: 45%;
+  top: 45px;
+  font-size: 1.2em;
+}
+.progressRing circle {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-width: 10px;
+  stroke-dasharray: 314;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+.progressRing circle:nth-child(2) {
+  stroke-width: 5px;
+  stroke: var(--yellow);
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1s ease;
+}
+.ring1 { stroke-dashoffset: 50 !important; }
+.ring2 { stroke-dashoffset: 31.5 !important; }
+.ring3 { stroke-dashoffset: 110 !important; }
+.ring4 { stroke-dashoffset: 94 !important; }
+.bar1 {width: 80% !important;}
+.bar2 {width: 80% !important;}
+.bar3 {width: 70% !important;}
+.bar4 {width: 60% !important;}
+.bar5 {width: 75% !important;}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  #theme { flex-direction: column; }
+  .col_wrap { width: 100%; height: 100%; }
+  nav {justify-content: center;}
+  #logo {display: none;}
+  header ul a {padding: 0; margin: 0 5px;}
+  #title { flex-direction: column; }
+  #title_text span {border-radius: 20px 0 20px 20px;}
+  #title_img {margin: 0;}
+  #mainSkills {flex-direction: column;}
+  #mainSkills>div {width: 100%;}
+  .progressSkill {text-align: center;}
+  .progress {margin: auto;}
+  .progressRing span {left: 42%;}
+}
