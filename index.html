@@ -6,8 +6,10 @@
   <title>Elchin's Resume</title>
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="style.css" />
-  <script src="main.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/355d94b1e8.js" crossorigin="anonymous"></script>
+  <script src="slick.min.js" defer></script>
+  <script src="main.js" defer></script>
 </head>
 <body>
   <!-- <div id="theme">
@@ -26,6 +28,7 @@
   </div> -->
   <div id="my-body" class="darkMain">
     <header>
+      <div id="shadow"></div>
       <section data-scroll="home" id="home">
         <div class="container">
           <nav>
@@ -141,10 +144,42 @@
             <div class="secTitle _anim-items">
               <h4>And some <span>Skills</span> More</h4>
             </div>
-            <div id="scnd-skills-items">
-              <div class="s-item">
-                <div class="s-item-img"></div>
-                <p><i class="fas fa-blog">a</i></p>
+            <div id="scndSkills-items">
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/code-bg.png" alt=""></div>
+                <p class="s-title">Responsive Website</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/boot.png" alt=""></div>
+                <p class="s-title">Bootstrap</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/mat.png" alt=""></div>
+                <p class="s-title">Materialize</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/ajax.png" alt=""></div>
+                <p class="s-title">Ajax</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/sass.png" alt=""></div>
+                <p class="s-title">Sass</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/vscode.png" alt=""></div>
+                <p class="s-title">VS code</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/pshop.png" alt=""></div>
+                <p class="s-title">Adobe Photoshop</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/office.png" alt=""></div>
+                <p class="s-title">Microsoft Office tools</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/sql.png" alt=""></div>
+                <p class="s-title">SQL</p>
               </div>
             </div>
           </div>

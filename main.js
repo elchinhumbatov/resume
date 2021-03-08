@@ -1,7 +1,10 @@
 const animItems = document.querySelectorAll('._anim-items');
+const paralaxElem = document.querySelector("#shadow");
 const myBody = document.querySelector('#my-body');
 const theme = document.querySelector('#theme');
 const darkMain = document.querySelectorAll('.darkMain');
+let header = document.querySelector('header');
+let title = document.querySelector('#title');
 let nav = document.querySelector('nav');
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('nav ul a');
@@ -31,10 +34,12 @@ function progressBar() {
 }
 function navOnScrol() {
   if (window.scrollY > 150) {
+    title.style.opacity = "0";
     nav.style.background = "var(--darkMain)";
     nav.style.boxShadow = "0 10px 15px rgba(0,0,0,.5)";
     toTop.style.opacity = "1";
   } else {
+    title.style.opacity = "1";
     nav.style.background = "transparent";
     nav.style.boxShadow = "none";
     toTop.style.opacity = "0";
@@ -91,3 +96,43 @@ function offset(el) {
 }
 setTimeout(animOnScroll, 500);
 toTop.onclick = () => window.scrollTo(0, 0);
+
+header.addEventListener("mousemove", parallax);
+function parallax(e) {
+    let _w = window.innerWidth;
+    let _h = window.innerHeight;
+    let _mouseX = e.clientX/2;
+    let _mouseY = e.clientY/2;
+    let _depth1 = `${25 - (_mouseX - _w) * 0.006}% ${60 - (_mouseY - _h) * 0.006}%`;
+    let _depth2 = `${55 - (_mouseX - _w) * 0.006}% ${70 - (_mouseY - _h) * 0.006}%`;
+    let _depth3 = `${70 - (_mouseX - _w) * 0.006}% ${30 - (_mouseY - _h) * 0.006}%`;
+    let _depth4 = `${20 - (_mouseX - _w) * 0.006}% ${30 - (_mouseY - _h) * 0.006}%`;
+    let x = `${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
+    paralaxElem.style.backgroundPosition = x;
+}
+$('#scndSkills-items').slick({
+  slidesToShow: 7,
+  slidesToScroll: 5,
+  waitForAnimate: false,
+  swipeToSlide: true,
+  variableWidth: true,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: { slidesToShow: 6 }
+    },
+    {
+      breakpoint: 800,
+      settings: { slidesToShow: 4 }
+    },
+    {
+      breakpoint: 600,
+      settings: { slidesToShow: 3 }
+    },
+    {
+      breakpoint: 400,
+      settings: { slidesToShow: 2 }
+    }
+  ]
+});
