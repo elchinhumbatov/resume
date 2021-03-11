@@ -40,9 +40,7 @@ i {font-family: "Font Awesome 5 Brands" !important;}
   background-size: 50%;
   transition: opacity 1s ease;
 }
-main section {
-  padding: 130px 0 0 0;
-}
+main section { padding: 130px 0 0 0; }
 .secTitle {
   margin: 0 0 70px 0;
   text-align: center;
@@ -67,7 +65,7 @@ main section {
   color: #000;
 }
 
-                                                                        /* THEME */
+/*                                                                        THEME */
 #theme {
   display: flex;
   justify-content: space-between;
@@ -95,17 +93,20 @@ main section {
 }
 .col_wrap>div:hover img {
   transform: scale(1.1);
-  /* box-shadow: 0 0 20px #000; */
-  box-shadow: 0px 10px 25px 2px rgba(0, 0, 0, .6);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, .6);
 }
 .col_wrap>div img {
-  width: 100%;
-  box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, .6);
-  transition: transform .7s ease, box-shadow .7s ease;
+  width: 90%;
+  transition: transform .5s ease, box-shadow .5s ease;
 }
-/* #my-body {display: none;} */
+/* #my-body { 
+  display: none;
+  opacity: 0;
+  transition: opacity .5s ease;
+} */
+#my-body.show {opacity: 1;}
 
-                                                                        /* ANIMATITON */
+/*                                                                      ANIMATITON */
 
 #title_img._anim-items {
   transform: scale(0);
@@ -126,13 +127,13 @@ header ._anim-items._active, .secTitle._active {
 #title_text h3._active {transition: transform .8s ease .4s, opacity .8s ease .7s;}
 #title_text p._active {transition: transform .8s ease .4s, opacity .8s ease 1s;}
 
-                                                                        /* HEADER */
+/*                                                                       HEADER */
 
 
 header {
   height: 100vh;
   position: relative;
-  background: var(--darkMain) url('img/header-bg.jpg') center/cover no-repeat;
+  background: url('img/header-bg.jpg') center/cover no-repeat;
   background-attachment: fixed;
 }
 #shadow {
@@ -140,12 +141,7 @@ header {
   bottom: 0;
   width: 100%;
   height: 100vh;
-  background: 
-    url('img/html.png') 20% 30%/50px 50px no-repeat, 
-    url('img/css.png') 70% 30%/50px 50px no-repeat, 
-    url('img/js.png') 55% 70%/50px 50px no-repeat, 
-    url('img/code-bg.png') 25% 60%/50px 50px no-repeat, 
-    linear-gradient(to top, var(--darkMain), transparent);
+  background: linear-gradient(to top, var(--darkMain), transparent);
 }
 nav {
   position: fixed;
@@ -214,7 +210,7 @@ header ul a.active { color: var(--yellow); }
   margin: 0 30px 0 0;
   background: linear-gradient(0deg, rgba(97, 97, 97, .3), rgba(97, 97, 97, .3)), url('img/mee.jpg') left/cover no-repeat;
 }
-                                                                        /* ABOUT */
+/*                                                                      ABOUT */
 
 #story {
   width: 80%;
@@ -241,7 +237,7 @@ header ul a.active { color: var(--yellow); }
   height: 20px;
 }
 
-                                                                        /* Skills */
+/*                                                                       Skills */
 
 #mainSkills {
   display: flex;
@@ -374,20 +370,52 @@ header ul a.active { color: var(--yellow); }
   border: none;
   outline: none;
   font-size: 0;
+  cursor: pointer;
 }
 .slick-prev {
   background: var(--darkScnd) url('img/caret-left-solid.svg') center no-repeat;
   transform: translate(-100%, 0);
 }
-.slick-next {
-  background: var(--darkScnd) url('img/caret-right-solid.svg') center no-repeat;
+.slick-next { background: var(--darkScnd) url('img/caret-right-solid.svg') center no-repeat; }
+.slick-disabled:hover { cursor: not-allowed; }
+/*                                                                    experience */
+
+#exp-wrap {
+  display: flex;
 }
-.slick-disabled:hover {
-  cursor: not-allowed;
+#exp-wrap>div {
+  width: 50%;
 }
-
-
-
+#work-exp {
+  border-right: 2px solid var(--darkScnd);
+}
+#edu-exp {
+  border-left: 2px solid var(--darkScnd);
+}
+.w-item {
+  width: 60%;
+  border-radius: 15px;
+  margin: 0 auto 20px;
+  padding: 30px 30px 20px;
+  transition: transform .5s ease;
+}
+.w-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, .5);
+}
+.w-item>div {
+  margin: 0 0 15px 0;
+}
+.w-item h5 {font-weight: 700;}
+.w-period {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.w-period p, .w-text p {
+  font-size: .8em;
+  line-height: 1.5em;
+}
 
 
 @media screen and (max-width: 600px) {

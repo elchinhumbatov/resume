@@ -1,9 +1,8 @@
 const animItems = document.querySelectorAll('._anim-items');
-const paralaxElem = document.querySelector("#shadow");
 const myBody = document.querySelector('#my-body');
 const theme = document.querySelector('#theme');
 const darkMain = document.querySelectorAll('.darkMain');
-let header = document.querySelector('header');
+const darkScnd = document.querySelectorAll('.darkScnd');
 let title = document.querySelector('#title');
 let nav = document.querySelector('nav');
 let sections = document.querySelectorAll('section');
@@ -12,14 +11,21 @@ let progressbar = document.querySelector('#progressbar');
 let toTop = document.querySelector('#toTop');
 let rings = document.querySelectorAll('.progressRing circle:nth-child(2)');
 let skillBars = document.querySelectorAll('.progress span');
+let shadow = document.querySelector('#shadow');
+let themeBool = 0;
+
 function lightTheme() {
   darkMain.forEach(item => item.classList.add('lightMain'));
-  myBody.style.display = "block";
-  theme.style.display = "none";
+  darkScnd.forEach(item => item.classList.add('lightScnd'));
+  shadow.style.background = "linear-gradient(to top, var(--lightScnd), transparent)";
+  themeBool = 1;
+  darkTheme();
 }
 function darkTheme() {
   myBody.style.display = "block";
+  setTimeout(() => myBody.classList.add('show'), 100);
   theme.style.display = "none";
+  setTimeout(animOnScroll, 700);
 }
 document.addEventListener('scroll', () => {
   myanim();
@@ -35,9 +41,15 @@ function progressBar() {
 function navOnScrol() {
   if (window.scrollY > 150) {
     title.style.opacity = "0";
-    nav.style.background = "var(--darkMain)";
-    nav.style.boxShadow = "0 10px 15px rgba(0,0,0,.5)";
+    nav.style.boxShadow = "0 5px 10px rgba(0,0,0,.5)";
     toTop.style.opacity = "1";
+    if (!themeBool) {
+      nav.style.background = "var(--darkMain)";
+      navLinks.forEach(link => link.style.color = 'var(--lightMain)');
+    } else {
+      nav.style.background = "var(--lightMain)";
+      navLinks.forEach(link => link.style.color = 'var(--darkMain)');
+    }
   } else {
     title.style.opacity = "1";
     nav.style.background = "transparent";
@@ -94,22 +106,9 @@ function offset(el) {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
-setTimeout(animOnScroll, 500);
-toTop.onclick = () => window.scrollTo(0, 0);
 
-header.addEventListener("mousemove", parallax);
-function parallax(e) {
-    let _w = window.innerWidth;
-    let _h = window.innerHeight;
-    let _mouseX = e.clientX/2;
-    let _mouseY = e.clientY/2;
-    let _depth1 = `${25 - (_mouseX - _w) * 0.006}% ${60 - (_mouseY - _h) * 0.006}%`;
-    let _depth2 = `${55 - (_mouseX - _w) * 0.006}% ${70 - (_mouseY - _h) * 0.006}%`;
-    let _depth3 = `${70 - (_mouseX - _w) * 0.006}% ${30 - (_mouseY - _h) * 0.006}%`;
-    let _depth4 = `${20 - (_mouseX - _w) * 0.006}% ${30 - (_mouseY - _h) * 0.006}%`;
-    let x = `${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
-    paralaxElem.style.backgroundPosition = x;
-}
+function goTop() { window.scrollTo(0, 0) }
+
 $('#scndSkills-items').slick({
   slidesToShow: 7,
   slidesToScroll: 5,
