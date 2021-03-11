@@ -383,9 +383,7 @@ header ul a.active { color: var(--yellow); }
 #exp-wrap {
   display: flex;
 }
-#exp-wrap>div {
-  width: 50%;
-}
+#exp-wrap>div { width: 50%; }
 #work-exp {
   border-right: 2px solid var(--darkScnd);
 }
@@ -417,8 +415,13 @@ header ul a.active { color: var(--yellow); }
   line-height: 1.5em;
 }
 
-
+@media screen and (max-width: 900px) {
+  #exp-wrap {display: block;}
+  #exp-wrap>div {width: 100%; margin: auto; border: none;}
+  #work-exp {margin: 0 auto 70px !important;}
+}
 @media screen and (max-width: 600px) {
+  .secTitle h4 {font-size: 1.2em;}
   #theme { flex-direction: column; }
   .col_wrap { width: 100%; height: 100%; }
   nav {justify-content: center;}
@@ -432,4 +435,5 @@ header ul a.active { color: var(--yellow); }
   .progressSkill {text-align: center;}
   .progress {margin: auto;}
   .progressRing span {left: 42%;}
+  .w-item {width: 80%;}
 }
