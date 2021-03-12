@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 * {font-family: 'Roboto', sans-serif !important; scroll-behavior: smooth;}
 i {font-family: "Font Awesome 5 Brands" !important;}
+i.fas {font-family: "Font Awesome 5 Free" !important;}
 :root {
   --darkMain: #303236;
   --darkScnd: #3c3e41;
@@ -99,11 +100,11 @@ main section { padding: 130px 0 0 0; }
   width: 90%;
   transition: transform .5s ease, box-shadow .5s ease;
 }
-/* #my-body { 
+#my-body { 
   display: none;
   opacity: 0;
   transition: opacity .5s ease;
-} */
+}
 #my-body.show {opacity: 1;}
 
 /*                                                                      ANIMATITON */
@@ -133,14 +134,14 @@ header ._anim-items._active, .secTitle._active {
 header {
   height: 100vh;
   position: relative;
-  background: url('img/header-bg.jpg') center/cover no-repeat;
+  background: url('img/header-bg1.jpeg') left/cover no-repeat;
   background-attachment: fixed;
 }
 #shadow {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100vh;
+  height: 30vh;
   background: linear-gradient(to top, var(--darkMain), transparent);
 }
 nav {
@@ -353,7 +354,7 @@ header ul a.active { color: var(--yellow); }
   margin: 5px 0 0 0;
 }
 .slick-slider { position: relative; }
-.slick-list { overflow: hidden; padding: 0 15px; }
+.slick-list { overflow: hidden; padding: 0 30px; }
 .slick-track { display: flex; padding: 0 15px;}
 .slick-slide {
   width: 100px;
@@ -384,12 +385,8 @@ header ul a.active { color: var(--yellow); }
   display: flex;
 }
 #exp-wrap>div { width: 50%; }
-#work-exp {
-  border-right: 2px solid var(--darkScnd);
-}
-#edu-exp {
-  border-left: 2px solid var(--darkScnd);
-}
+#work-exp { border-right: 2px solid var(--darkScnd); }
+#edu-exp { border-left: 2px solid var(--darkScnd); }
 .w-item {
   width: 60%;
   border-radius: 15px;
@@ -415,10 +412,87 @@ header ul a.active { color: var(--yellow); }
   line-height: 1.5em;
 }
 
+/*                                                                    CONTACT */
+
+#contact-wrap {
+  display: flex;
+  align-items: center;
+}
+#contact-wrap>div { width: 50%; margin: 0 auto 50px auto;}
+#c-main-items {
+  width: 70%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+}
+.c-main-item { 
+  display: flex; 
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+.c-icon { 
+  min-width: 30px; 
+  margin: 0 30px 0 0; 
+  text-align: center;
+  color: var(--yellow);
+}
+.c-icon i {font-size: 1.8em;}
+.c-info h6 {font-size: 1.2em; font-weight: 700; line-height: 2em;}
+.c-info p {font-size: .9em; }
+.c-info p:hover a {color: var(--yellow);}
+#social {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0 0 0;
+}
+#social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 1.3em;
+}
+#social a:hover {
+  color: var(--yellow);
+}
+#c-form form {
+  width: 90%;
+  border-radius: 20px;
+  padding: 30px;
+  margin: auto;
+}
+.form-control {
+  border-bottom: 1px solid gray;
+}
+.form-control>* {
+  box-sizing: border-box;
+  padding: 15px 20px;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.form-control textarea {resize: none;}
+.form-control button {
+  cursor: pointer;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+/*                                                                    FOOTER */
+
+footer {
+  padding: 45px 0;
+  text-align: center;
+}
+
+
 @media screen and (max-width: 900px) {
   #exp-wrap {display: block;}
   #exp-wrap>div {width: 100%; margin: auto; border: none;}
   #work-exp {margin: 0 auto 70px !important;}
+  #contact-wrap {display: block;}
+  #contact-wrap>div {width: 70%;}
+  #c-main-items {width: 90%;}
 }
 @media screen and (max-width: 600px) {
   .secTitle h4 {font-size: 1.2em;}
@@ -436,4 +510,5 @@ header ul a.active { color: var(--yellow); }
   .progress {margin: auto;}
   .progressRing span {left: 42%;}
   .w-item {width: 80%;}
+  #contact-wrap>div {width: 100%;}
 }
