@@ -9,6 +9,7 @@ let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('nav ul a');
 let progressbar = document.querySelector('#progressbar');
 let toTop = document.querySelector('#toTop');
+var form = document.querySelector("#c-form form");
 let themeBool = 0;
 
 function lightTheme() {
@@ -143,3 +144,37 @@ $('#scndSkills-items').slick({
     }
   ]
 });
+
+    
+async function handleSubmit(event) {
+  event.preventDefault();
+  let loader = document.querySelector('#form-loader');
+  loader.style.display = 'flex';
+  let status = document.getElementById("form-status");
+  let data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    loader.style.display = 'none';
+    status.classList.add('succes');
+    status.innerHTML = "Thanks for your message!";
+    reset('succes');
+    form.reset('succes');
+  }).catch(error => {
+    loader.style.display = 'none';
+    status.classList.add('error');
+    status.innerHTML = "Oops! Something went wrong...";
+    reset('error');
+  });
+  function reset(_status) {
+    setTimeout(() => {
+      status.classList.remove(_status);
+      status.innerHTML = "";
+    }, 3000);
+  }
+}
+form.addEventListener("submit", handleSubmit)

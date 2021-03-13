@@ -457,6 +457,7 @@ header ul a.active { color: var(--yellow); }
   color: var(--yellow);
 }
 #c-form form {
+  position: relative;
   width: 90%;
   border-radius: 20px;
   padding: 30px;
@@ -517,6 +518,39 @@ footer {
   font-size: 1.5em;
   line-height: 2em;
 }
+#form-loader {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+}
+#form-status {
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  
+}
+#form-status.succes {
+  animation: status 3s linear forwards;
+  background-color: green;
+}
+#form-status.error {
+  animation: status 3s linear forwards;
+  background-color: indianred;
+}
+@keyframes status {
+  0% {opacity: 0; margin-top: 0; padding: 0;}
+  20% {opacity: 1; margin-top: 20px; padding: 10px;}
+  90% {opacity: 1; margin-top: 20px; padding: 10px;}
+  100% {opacity: 0; margin-top: 0; padding: 0;}
+}
+
 
 @media screen and (max-width: 900px) {
   #exp-wrap {display: block;}
