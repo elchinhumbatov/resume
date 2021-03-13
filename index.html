@@ -13,16 +13,16 @@
 </head>
 <body>
   <div id="theme">
-    <div id="light_wrap" class="col_wrap" onclick="lightTheme()">
-      <div>
-        <h1>Light Version</h1>
-        <img src="img/light.png" alt="">
-      </div>
-    </div>
     <div id="dark_wrap" class="col_wrap" onclick="darkTheme()">
       <div>
         <h1>Dark Version</h1>
         <img src="img/dark.png" alt="">
+      </div>
+    </div>
+    <div id="light_wrap" class="col_wrap" onclick="lightTheme()">
+      <div>
+        <h1>Light Version</h1>
+        <img src="img/light.png" alt="">
       </div>
     </div>
   </div>
@@ -361,7 +361,7 @@
               </div>
             </div>
             <div id="c-form">
-              <form action="#" method="POST" class="darkScnd">
+              <form action="mailMe.php" method="POST" class="darkScnd">
                 <div class="form-control">
                   <input class="darkScnd" type="text" name="name" placeholder="Your Name" />
                 </div>
@@ -375,7 +375,7 @@
                   <textarea class="darkScnd" name="message" rows="3" placeholder="Your Message"></textarea>
                 </div>
                 <div class="form-control">
-                  <button class="darkScnd">Send</button>
+                  <button class="darkScnd" name="submit">Send</button>
                 </div>
               </form>
             </div>
@@ -391,6 +391,13 @@
       </div>
     </footer>
 
+    <div id="tabbar" class="darkMain">
+      <a class="active darkMain" data-link='home' href="#home"><i class="fas fa-home"></i><br/>Home</a>
+      <a class="darkMain" data-link='about' href="#about"><i class="fas fa-user"></i><br/>About</a>
+      <a class="darkMain" data-link='skills' href="#skills"><i class="fas fa-tools"></i><br/>Skills</a>
+      <a class="darkMain" data-link='experience' href="#experience"><i class="fas fa-graduation-cap"></i><br/>Expc</a>
+      <a class="darkMain" data-link='contact' href="#contact"><i class="fas fa-address-book"></i><br/>Contact</a>
+    </div>
     <div id="progressbar"></div>
     <div id="toTop" onclick="goTop()" class="darkScnd"></div>
   </div>

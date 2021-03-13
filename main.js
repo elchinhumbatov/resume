@@ -9,12 +9,10 @@ let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('nav ul a');
 let progressbar = document.querySelector('#progressbar');
 let toTop = document.querySelector('#toTop');
-let rings = document.querySelectorAll('.progressRing circle:nth-child(2)');
-let skillBars = document.querySelectorAll('.progress span');
-let shadow = document.querySelector('#shadow');
 let themeBool = 0;
 
 function lightTheme() {
+  let shadow = document.querySelector('#shadow');
   darkMain.forEach(item => item.classList.add('lightMain'));
   darkScnd.forEach(item => item.classList.add('lightScnd'));
   shadow.style.background = "linear-gradient(to top, var(--lightScnd), transparent)";
@@ -60,15 +58,24 @@ function navOnScrol() {
 }
 function myanim() {
   for (let i = 0; i < sections.length; i++) {
-    if (window.scrollY + nav.offsetHeight + 100 >= sections[i].offsetTop && 
+    if (window.scrollY + nav.offsetHeight >= sections[i].offsetTop && 
         window.scrollY <= sections[i].offsetTop + sections[i].offsetHeight) {
       let offsetData = sections[i].dataset.scroll;
-      navLinks.forEach(item => {
+      // navLinks.forEach(item => {
+      //   if (offsetData == item.dataset.link) {
+      //     item.classList.add('active');
+      //   } else { item.classList.remove('active'); }
+      // });
+      for (let i = 0; i < navLinks.length; i++) {
+        let tabLinks = document.querySelectorAll('#tabbar a');
+        let item = (window.innerWidth >= 600) ? navLinks[i] : tabLinks[i];
         if (offsetData == item.dataset.link) {
           item.classList.add('active');
         } else { item.classList.remove('active'); }
-      });
+      }
       if (offsetData == 'skills') {
+        let rings = document.querySelectorAll('.progressRing circle:nth-child(2)');
+        let skillBars = document.querySelectorAll('.progress span');
         for (let i = 1; i <= rings.length; i++) {
           rings[i-1].classList.add("ring" + i);
         }

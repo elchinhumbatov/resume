@@ -26,6 +26,7 @@ i.fas {font-family: "Font Awesome 5 Free" !important;}
 }
 #toTop {
   position: fixed;
+  z-index: 60;
   right: 50px;
   bottom: 50px;
   width: 50px;
@@ -135,7 +136,7 @@ header {
   height: 100vh;
   position: relative;
   background: url('img/header-bg1.jpeg') left/cover no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 #shadow {
   position: absolute;
@@ -484,7 +485,38 @@ footer {
   padding: 45px 0;
   text-align: center;
 }
-
+#tabbar {
+  position: fixed;
+  z-index: 50;
+  width: 100vw;
+  bottom: 0;
+  display: none;
+  justify-content: space-around;
+  text-align: center;
+  height: 100px;
+  padding: 0;
+  box-shadow: 0 -5px 10px rgba(0,0,0,.3);
+}
+#tabbar a { position: relative; width: 60px;}
+#tabbar a::before {
+  content: '';
+  position: absolute;
+  z-index: 51;
+  left: 0;
+  top: .3px;
+  transform: scaleX(0);
+  height: 3px;
+  width: 100%;
+  background-color: var(--yellow);
+  border-radius: 5px;
+  transition: transform .5s ease;
+}
+#tabbar a.active::before {transform: scale(1);}
+#tabbar a.active {color: var(--yellow);}
+#tabbar i {
+  font-size: 1.5em;
+  line-height: 2em;
+}
 
 @media screen and (max-width: 900px) {
   #exp-wrap {display: block;}
@@ -498,8 +530,7 @@ footer {
   .secTitle h4 {font-size: 1.2em;}
   #theme { flex-direction: column; }
   .col_wrap { width: 100%; height: 100%; }
-  nav {justify-content: center;}
-  #logo {display: none;}
+  nav {display: none;}
   header ul a {padding: 0; margin: 0 5px;}
   #title { flex-direction: column; }
   #title_text span {border-radius: 20px 0 20px 20px;}
@@ -511,4 +542,6 @@ footer {
   .progressRing span {left: 42%;}
   .w-item {width: 80%;}
   #contact-wrap>div {width: 100%;}
+  #tabbar {display: flex;}
+  #toTop {bottom: 120px;}
 }
