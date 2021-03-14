@@ -499,7 +499,7 @@ footer {
   padding-top: 0;
   box-shadow: 0 -5px 10px rgba(0,0,0,.3);
 }
-#tabbar a { position: relative; width: 60px;}
+#tabbar a { display: inline-block; padding: 13px 0 0 0; font-size: .9em; position: relative; width: 60px;}
 #tabbar a::before {
   content: '';
   position: absolute;
@@ -562,7 +562,7 @@ footer {
   #c-main-items {width: 90%;}
 }
 @media screen and (max-width: 600px) {
-  header {height: 90vh;}
+  header {height: 90vh; background-attachment: scroll;}
   .secTitle h4 {font-size: 1.2em;}
   #theme { flex-direction: column; }
   .col_wrap { width: 100%; height: 100%; }
