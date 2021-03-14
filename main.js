@@ -17,7 +17,6 @@ function lightTheme() {
   darkMain.forEach(item => item.classList.add('lightMain'));
   darkScnd.forEach(item => item.classList.add('lightScnd'));
   shadow.style.background = "linear-gradient(to top, var(--lightScnd), transparent)";
-  shadow.style.height = "60vh";
   themeBool = 1;
   darkTheme();
 }

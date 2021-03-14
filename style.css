@@ -187,6 +187,7 @@ header ul a.active { color: var(--yellow); }
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--lightMain);
   top: 50%;
   left: 50%;
   width: 80%;
@@ -318,7 +319,7 @@ header ul a.active { color: var(--yellow); }
   stroke-width: 5px;
   stroke: var(--yellow);
   stroke-dashoffset: 314;
-  transition: stroke-dashoffset 1s ease;
+  transition: stroke-dashoffset 1s ease .5s;
 }
 .ring1 { stroke-dashoffset: 50 !important; }
 .ring2 { stroke-dashoffset: 31.5 !important; }
@@ -354,9 +355,9 @@ header ul a.active { color: var(--yellow); }
   line-height: 1.3em;
   margin: 5px 0 0 0;
 }
-.slick-slider { position: relative; }
-.slick-list { overflow: hidden; padding: 0 30px; }
-.slick-track { display: flex; padding: 0 15px;}
+.slick-slider { position: relative; padding: 0 15px;}
+.slick-list { overflow: hidden; padding: 0 20px;}
+.slick-track { display: flex; }
 .slick-slide {
   width: 100px;
   outline: none;
@@ -495,7 +496,7 @@ footer {
   justify-content: space-around;
   text-align: center;
   height: 100px;
-  padding: 0;
+  padding-top: 0;
   box-shadow: 0 -5px 10px rgba(0,0,0,.3);
 }
 #tabbar a { position: relative; width: 60px;}
@@ -515,7 +516,7 @@ footer {
 #tabbar a.active::before {transform: scale(1);}
 #tabbar a.active {color: var(--yellow);}
 #tabbar i {
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 2em;
 }
 #form-loader {
@@ -561,6 +562,7 @@ footer {
   #c-main-items {width: 90%;}
 }
 @media screen and (max-width: 600px) {
+  header {height: 90vh;}
   .secTitle h4 {font-size: 1.2em;}
   #theme { flex-direction: column; }
   .col_wrap { width: 100%; height: 100%; }
@@ -578,4 +580,5 @@ footer {
   #contact-wrap>div {width: 100%;}
   #tabbar {display: flex;}
   #toTop {bottom: 120px;}
+  footer {font-size: 0; margin: 100px 0 0 0;}
 }
