@@ -58,7 +58,7 @@ function navOnScrol() {
 }
 function myanim() {
   for (let i = 0; i < sections.length; i++) {
-    if (window.scrollY + nav.offsetHeight >= sections[i].offsetTop && 
+    if (window.scrollY + nav.offsetHeight + 10 >= sections[i].offsetTop && 
         window.scrollY <= sections[i].offsetTop + sections[i].offsetHeight) {
       let offsetData = sections[i].dataset.scroll;
       // navLinks.forEach(item => {
