@@ -117,32 +117,32 @@ function offset(el) {
 
 function goTop() { window.scrollTo(0, 0) }
 
-$('#scndSkills-items').slick({
-  slidesToShow: 7,
-  slidesToScroll: 5,
-  waitForAnimate: false,
-  swipeToSlide: true,
-  variableWidth: true,
-  infinite: false,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 6 }
-    },
-    {
-      breakpoint: 800,
-      settings: { slidesToShow: 4 }
-    },
-    {
-      breakpoint: 600,
-      settings: { slidesToShow: 3 }
-    },
-    {
-      breakpoint: 400,
-      settings: { slidesToShow: 2 }
-    }
-  ]
-});
+// $('#scndSkills-items').slick({
+//   slidesToShow: 7,
+//   slidesToScroll: 5,
+//   waitForAnimate: false,
+//   swipeToSlide: true,
+//   variableWidth: true,
+//   infinite: false,
+//   responsive: [
+//     {
+//       breakpoint: 1024,
+//       settings: { slidesToShow: 6 }
+//     },
+//     {
+//       breakpoint: 800,
+//       settings: { slidesToShow: 4 }
+//     },
+//     {
+//       breakpoint: 600,
+//       settings: { slidesToShow: 3 }
+//     },
+//     {
+//       breakpoint: 400,
+//       settings: { slidesToShow: 2 }
+//     }
+//   ]
+// });
 
     
 async function handleSubmit(event) {

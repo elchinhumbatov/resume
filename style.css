@@ -330,10 +330,14 @@ header ul a.active { color: var(--yellow); }
 .bar3 {width: 70% !important;}
 .bar4 {width: 60% !important;}
 .bar5 {width: 75% !important;}
+
+#scndSkills-items {display: flex; flex-wrap: wrap; justify-content: space-around;}
 .s-item {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 100px;
+  margin: 25px;
   padding: 10px 5px;
   text-align: center;
   border-radius: 15px;
@@ -355,7 +359,8 @@ header ul a.active { color: var(--yellow); }
   line-height: 1.3em;
   margin: 5px 0 0 0;
 }
-.slick-slider { position: relative; padding: 0 15px;}
+
+/* .slick-slider { position: relative; padding: 0 15px;}
 .slick-list { overflow: hidden; padding: 0 20px;}
 .slick-track { display: flex; }
 .slick-slide {
@@ -380,7 +385,7 @@ header ul a.active { color: var(--yellow); }
   transform: translate(-100%, 0);
 }
 .slick-next { background: var(--darkScnd) url('img/caret-right-solid.svg') center no-repeat; }
-.slick-disabled:hover { cursor: not-allowed; }
+.slick-disabled:hover { cursor: not-allowed; } */
 /*                                                                    experience */
 
 #exp-wrap {
