@@ -11,6 +11,9 @@ let progressbar = document.querySelector('#progressbar');
 let toTop = document.querySelector('#toTop');
 var form = document.querySelector("#c-form form");
 let themeBool = 0;
+let count = 0;
+let items = $('.s-item');
+let skillsX1;
 
 function lightTheme() {
   let shadow = document.querySelector('#shadow');
@@ -61,11 +64,6 @@ function myanim() {
     if (window.scrollY + nav.offsetHeight + 10 >= sections[i].offsetTop && 
         window.scrollY <= sections[i].offsetTop + sections[i].offsetHeight) {
       let offsetData = sections[i].dataset.scroll;
-      // navLinks.forEach(item => {
-      //   if (offsetData == item.dataset.link) {
-      //     item.classList.add('active');
-      //   } else { item.classList.remove('active'); }
-      // });
       for (let i = 0; i < navLinks.length; i++) {
         let tabLinks = document.querySelectorAll('#tabbar a');
         let item = (window.innerWidth >= 600) ? navLinks[i] : tabLinks[i];
@@ -116,34 +114,6 @@ function offset(el) {
 }
 
 function goTop() { window.scrollTo(0, 0) }
-
-// $('#scndSkills-items').slick({
-//   slidesToShow: 7,
-//   slidesToScroll: 5,
-//   waitForAnimate: false,
-//   swipeToSlide: true,
-//   variableWidth: true,
-//   infinite: false,
-//   responsive: [
-//     {
-//       breakpoint: 1024,
-//       settings: { slidesToShow: 6 }
-//     },
-//     {
-//       breakpoint: 800,
-//       settings: { slidesToShow: 4 }
-//     },
-//     {
-//       breakpoint: 600,
-//       settings: { slidesToShow: 3 }
-//     },
-//     {
-//       breakpoint: 400,
-//       settings: { slidesToShow: 2 }
-//     }
-//   ]
-// });
-
     
 async function handleSubmit(event) {
   event.preventDefault();
@@ -176,4 +146,48 @@ async function handleSubmit(event) {
     }, 3000);
   }
 }
-form.addEventListener("submit", handleSubmit)
+form.addEventListener("submit", handleSubmit);
+
+function skillsRight(prop) {
+  let itemCount = Math.trunc($('#scndSkills-items').width() / 150);
+  count++;
+  if (prop) {
+    console.log('some');
+  }
+  if (items.length - count * itemCount <= itemCount) {
+    for (let i = 0; i < items.length; i++) {
+      items[i].style.transform='translate('+(items.length - itemCount) * -150 +'px, 0)';
+    }
+    count--;
+  }
+  else {
+    for (let i = 0; i < items.length; i++) {
+      items[i].style.transform='translate('+(itemCount * count * -150)+'px, 0)';
+    }
+  }
+}
+function skillsLeft() {
+  let itemCount = Math.trunc($('#scndSkills-items').width() / 150);
+  count--;
+  if (count < 0) count = 0;
+  for (let i = 0; i < items.length; i++) {
+    items[i].style.transform='translate('+(itemCount*count*-150)+'px, 0)';
+  }
+}
+function mDown(e) {
+  skillsX1 = e.clientX;
+  $('#scndSkills-items').css('cursor', 'grabbing');
+}
+function mUp(e) {
+  if (skillsX1 - 50 >= e.clientX ) skillsRight();
+  else if (skillsX1 + 50 <= e.clientX ) skillsLeft();
+  $('#scndSkills-items').css('cursor', 'grab');
+}
+function tchStart(e) {
+  skillsX1 = e.touches[0].clientX;
+}
+function tchEnd(e) {
+  let x2 = e.changedTouches[0].clientX;
+  if (skillsX1 - 30 >= x2) skillsRight();
+  else if (skillsX1 + 30 <= x2) skillsLeft();
+}

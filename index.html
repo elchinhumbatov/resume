@@ -10,7 +10,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/355d94b1e8.js" crossorigin="anonymous"></script>
-  <script src="slick.min.js" defer></script>
   <script src="main.js" defer></script>
 </head>
 <body>
@@ -146,7 +145,11 @@
             <div class="secTitle _anim-items">
               <h4>And some <span>Skills</span> More</h4>
             </div>
-            <div id="scndSkills-items">
+            <div id="scndSkills-items"
+            onmousedown="mDown(event)"
+            onmouseup="mUp(event)"
+            ontouchstart="tchStart(event)"
+            ontouchend="tchEnd(event)">
               <div class="s-item darkScnd">
                 <div class="s-icon"><img src="img/code-bg.png" alt=""></div>
                 <p class="s-title">Responsive Website</p>
@@ -187,6 +190,10 @@
                 <div class="s-icon"><img src="img/java.png" alt=""></div>
                 <p class="s-title">Java (basics)</p>
               </div>
+            </div>
+            <div id="sliderBtn">
+              <button class="btn-prev" onclick="skillsLeft()"></button>
+              <button class="btn-next" onclick="skillsRight()"></button>
             </div>
           </div>
         </div>
