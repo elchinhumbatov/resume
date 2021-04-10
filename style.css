@@ -15,6 +15,30 @@ i.fas {font-family: "Font Awesome 5 Free" !important;}
 .darkScnd {background-color: var(--darkScnd); color: var(--lightMain);}
 .lightScnd {background-color: var(--lightScnd); color: var(--darkMain);}
 
+#themeSwitcher {
+  position: relative;
+  width: 35px;
+  height: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  cursor: pointer;
+}
+#themeSwitcher.darkMain::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #000;
+  background: black url('img/moon-solid.svg') center/70% no-repeat;
+  transition: left .2s linear;
+}
+#themeSwitcher.lightMain::before {
+  left: 20px;
+  background: rgb(172, 170, 170) url('img/sun-solid.svg') center/70% no-repeat;
+}
 #progressbar {
   position: fixed;
   z-index: 100;
@@ -102,8 +126,8 @@ main section { padding: 130px 0 0 0; }
   transition: transform .5s ease, box-shadow .5s ease;
 }
 #my-body { 
-  display: none;
-  opacity: 0;
+  /* display: none;
+  opacity: 0; */
   transition: opacity .5s ease;
 }
 #my-body.show {opacity: 1;}
@@ -154,7 +178,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 30px 5%;
-  background: transparent;
+  /* background: var(--darkMain); */
   transition: background .5s linear, box-shadow .5s linear;
 }
 #logo a {
@@ -162,7 +186,7 @@ nav {
   font-size: 1.5em;
   color: var(--yellow);
 }
-header ul { display: flex; }
+header ul { display: flex; align-items: center;}
 header ul a {
   color: var(--lightMain);
   padding: 5px 10px;

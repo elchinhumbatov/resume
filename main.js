@@ -1,38 +1,35 @@
 const animItems = document.querySelectorAll('._anim-items');
-const myBody = document.querySelector('#my-body');
-const theme = document.querySelector('#theme');
 const darkMain = document.querySelectorAll('.darkMain');
 const darkScnd = document.querySelectorAll('.darkScnd');
-let title = document.querySelector('#title');
-let nav = document.querySelector('nav');
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('nav ul a');
 let progressbar = document.querySelector('#progressbar');
-let toTop = document.querySelector('#toTop');
 var form = document.querySelector("#c-form form");
-let themeBool = 0;
-let count = 0;
+let shadow = document.querySelector('#shadow');
 let items = $('.s-item');
+let themeCounter = 0;
+let count = 0;
 let skillsX1;
 
-function lightTheme() {
-  let shadow = document.querySelector('#shadow');
-  darkMain.forEach(item => item.classList.add('lightMain'));
-  darkScnd.forEach(item => item.classList.add('lightScnd'));
-  shadow.style.background = "linear-gradient(to top, var(--lightScnd), transparent)";
-  themeBool = 1;
-  darkTheme();
+
+function themeToggle() {
+  themeCounter++;
+  if (themeCounter%2) {
+    darkMain.forEach(item => item.classList.add('lightMain'));
+    darkScnd.forEach(item => item.classList.add('lightScnd'));
+    shadow.style.background = "linear-gradient(to top, var(--lightScnd), transparent)";
+    navLinks.forEach(link => link.style.color = 'var(--darkMain)');
+  } else {
+    darkMain.forEach(item => item.classList.remove('lightMain'));
+    darkScnd.forEach(item => item.classList.remove('lightScnd'));
+    shadow.style.background = "linear-gradient(to top, var(--darkMain), transparent)";
+    navLinks.forEach(link => link.style.color = 'var(--lightMain)');
+  }
 }
-function darkTheme() {
-  myBody.style.display = "block";
-  setTimeout(() => myBody.classList.add('show'), 100);
-  theme.style.display = "none";
-  setTimeout(animOnScroll, 700);
-}
+setTimeout(animOnScroll, 700);
 document.addEventListener('scroll', () => {
   myanim();
   animOnScroll();
-  navOnScrol();
   progressBar();
 });
 function progressBar() {
@@ -40,28 +37,9 @@ function progressBar() {
   let h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   progressbar.style.width = ((w / h ) * 100) + '%';
 }
-function navOnScrol() {
-  if (window.scrollY > 150) {
-    title.style.opacity = "0";
-    nav.style.boxShadow = "0 5px 10px rgba(0,0,0,.5)";
-    toTop.style.opacity = "1";
-    if (!themeBool) {
-      nav.style.background = "var(--darkMain)";
-      navLinks.forEach(link => link.style.color = 'var(--lightMain)');
-    } else {
-      nav.style.background = "var(--lightMain)";
-      navLinks.forEach(link => link.style.color = 'var(--darkMain)');
-    }
-  } else {
-    title.style.opacity = "1";
-    nav.style.background = "transparent";
-    nav.style.boxShadow = "none";
-    toTop.style.opacity = "0";
-  }
-}
 function myanim() {
   for (let i = 0; i < sections.length; i++) {
-    if (window.scrollY + nav.offsetHeight + 10 >= sections[i].offsetTop && 
+    if (window.scrollY + 10 >= sections[i].offsetTop && 
         window.scrollY <= sections[i].offsetTop + sections[i].offsetHeight) {
       let offsetData = sections[i].dataset.scroll;
       for (let i = 0; i < navLinks.length; i++) {

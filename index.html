@@ -13,7 +13,7 @@
   <script src="main.js" defer></script>
 </head>
 <body>
-  <div id="theme">
+  <!-- <div id="theme">
     <div id="dark_wrap" class="col_wrap" onclick="darkTheme()">
       <div>
         <h1>Dark Version</h1>
@@ -26,13 +26,13 @@
         <img src="img/light.png" alt="">
       </div>
     </div>
-  </div>
+  </div> -->
   <div id="my-body" class="darkMain">
     <header>
       <div id="shadow"></div>
       <section data-scroll="home" id="home">
         <div class="container">
-          <nav>
+          <nav class="darkMain">
             <div id="logo">
               <h2><a href="index.html">ELCHIN</a></h2>
             </div>
@@ -42,6 +42,7 @@
               <li><a  data-link='skills' href="#skills">Skills</a></li>
               <li><a  data-link='experience' href="#experience">Experience</a></li>
               <li><a  data-link='contact' href="#contact">Contact</a></li>
+              <li><div id="themeSwitcher" class='darkMain' onclick="themeToggle()"></div></li>
             </ul>
           </nav>
           <div id="title">
@@ -151,8 +152,16 @@
             ontouchstart="tchStart(event)"
             ontouchend="tchEnd(event)">
               <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/code-bg.png" alt=""></div>
-                <p class="s-title">Responsive Website</p>
+                <div class="s-icon"><img src="img/react.png" alt=""></div>
+                <p class="s-title">React (basics)</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/sql.png" alt=""></div>
+                <p class="s-title">SQL (basics)</p>
+              </div>
+              <div class="s-item darkScnd">
+                <div class="s-icon"><img src="img/java.png" alt=""></div>
+                <p class="s-title">Java (basics)</p>
               </div>
               <div class="s-item darkScnd">
                 <div class="s-icon"><img src="img/boot.png" alt=""></div>
@@ -183,12 +192,8 @@
                 <p class="s-title">Microsoft Office tools</p>
               </div>
               <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/sql.png" alt=""></div>
-                <p class="s-title">SQL (basics)</p>
-              </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/java.png" alt=""></div>
-                <p class="s-title">Java (basics)</p>
+                <div class="s-icon"><img src="img/code-bg.png" alt=""></div>
+                <p class="s-title">Responsive Website</p>
               </div>
             </div>
             <div id="sliderBtn">
