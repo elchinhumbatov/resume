@@ -448,6 +448,7 @@ header ul a.active { color: var(--yellow); }
 #contact-wrap {
   display: flex;
   align-items: center;
+  padding: 20px 0 40px;
 }
 #contact-wrap>div { width: 50%; margin: 0 auto 50px auto;}
 #c-main-items {
@@ -586,7 +587,7 @@ footer {
   #exp-wrap {display: block;}
   #exp-wrap>div {width: 100%; margin: auto; border: none;}
   #work-exp {margin: 0 auto 70px !important;}
-  #contact-wrap {display: block;}
+  #contact-wrap {display: block; padding: 0;}
   #contact-wrap>div {width: 70%;}
   #c-main-items {width: 90%;}
 }
