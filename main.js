@@ -4,6 +4,7 @@ const darkScnd = document.querySelectorAll('.darkScnd');
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('nav ul a');
 let progressbar = document.querySelector('#progressbar');
+let toTop = document.querySelector('#toTop');
 var form = document.querySelector("#c-form form");
 let shadow = document.querySelector('#shadow');
 let items = $('.s-item');
@@ -42,6 +43,7 @@ function myanim() {
     if (window.scrollY + 10 >= sections[i].offsetTop && 
         window.scrollY <= sections[i].offsetTop + sections[i].offsetHeight) {
       let offsetData = sections[i].dataset.scroll;
+      toTop.style.opacity = offsetData !== 'home' ? 1 : 0;
       for (let i = 0; i < navLinks.length; i++) {
         let tabLinks = document.querySelectorAll('#tabbar a');
         let item = (window.innerWidth >= 600) ? navLinks[i] : tabLinks[i];

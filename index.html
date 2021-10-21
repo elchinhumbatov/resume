@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Humbatov Elchin's cv resume site">
-  <meta name="keywords" content="cv, resume, front-end developer, web developer, HTML, CSS, JavaScript, React, Angular">
-  <meta name="author" content="Elchin Humbatov">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elchin's Resume</title>
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/355d94b1e8.js" crossorigin="anonymous"></script>
-  <script src="main.js" defer></script>
-</head>
-<body>
-  <!-- <div id="theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Humbatov Elchin's cv resume site" />
+    <meta
+      name="keywords"
+      content="cv, resume, front-end developer, web developer, HTML, CSS, JavaScript, React, Angular"
+    />
+    <meta name="author" content="Elchin Humbatov" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elchin's Resume</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/355d94b1e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- <div id="theme">
     <div id="dark_wrap" class="col_wrap" onclick="darkTheme()">
       <div>
         <h1>Dark Version</h1>
@@ -30,426 +40,576 @@
       </div>
     </div>
   </div> -->
-  <div id="my-body" class="darkMain">
-    <header>
-      <div id="shadow"></div>
-      <section data-scroll="home" id="home">
-        <div class="container">
-          <nav class="darkMain">
-            <div id="logo">
-              <h2><a href="index.html">ELCHIN</a></h2>
-            </div>
-            <ul>
-              <li><a class="active" data-link='home' href="#home">Home</a></li>
-              <li><a  data-link='about' href="#about">About</a></li>
-              <li><a  data-link='skills' href="#skills">Skills</a></li>
-              <li><a  data-link='experience' href="#experience">Experience</a></li>
-              <li><a  data-link='contact' href="#contact">Contact</a></li>
-              <li><div id="themeSwitcher" class='darkMain' onclick="themeToggle()"></div></li>
-            </ul>
-          </nav>
-          <div id="title">
-            <div id="title_img" class="_anim-items _anim-norepeat"></div>
-            <div id="title_text">
-              <span class="_anim-items _anim-norepeat">Hello! I'm</span>
-              <h3 class="_anim-items _anim-norepeat">Elchin Humbatov</h3>
-              <p class="_anim-items _anim-norepeat">Web Developer</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
-    <main>
-      <section class="darkMain _anim-items" id="about" data-scroll='about'>
-        <div class="container">
-          <div class="secTitle _anim-items">
-            <h4>Little Story <span>About</span> Me</h4>
-          </div>
-          <div id="story">
-            <div id="summary">
-              <p>Hello! I am Elchin, web-developer. </p>
-              <p>I am a certified and experienced front-end developer. I have experience in creating mobile responsive web sites, SPA (single page applications). I also have experience in developing a websites from scratch with React and Angular.</p>
-              <a href="Elchin Humbatov resume.pdf" download class="darkScnd"> Download Resume </a>
+    <div id="my-body" class="darkMain">
+      <header>
+        <div id="shadow"></div>
+        <section data-scroll="home" id="home">
+          <div class="container">
+            <nav class="darkMain">
+              <div id="logo">
+                <h2><a href="index.html">ELCHIN</a></h2>
+              </div>
+              <ul>
+                <li>
+                  <a class="active" data-link="home" href="#home">Home</a>
+                </li>
+                <li><a data-link="about" href="#about">About</a></li>
+                <li><a data-link="skills" href="#skills">Skills</a></li>
+                <li>
+                  <a data-link="experience" href="#experience">Experience</a>
+                </li>
+                <li><a data-link="contact" href="#contact">Contact</a></li>
+                <li>
+                  <div
+                    id="themeSwitcher"
+                    class="darkMain"
+                    onclick="themeToggle()"
+                  ></div>
+                </li>
+              </ul>
+            </nav>
+            <div id="title">
+              <div id="title_img" class="_anim-items _anim-norepeat"></div>
+              <div id="title_text">
+                <span class="_anim-items _anim-norepeat">Hello! I'm</span>
+                <h3 class="_anim-items _anim-norepeat">Elchin Humbatov</h3>
+                <p class="_anim-items _anim-norepeat">Web Developer</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="darkMain" id="skills" data-scroll='skills'>
-        <div class="container">
-          <div class="secTitle _anim-items">
-            <h4>Some of my <span>Skills</span></h4>
+        </section>
+      </header>
+      <main>
+        <section class="darkMain _anim-items" id="about" data-scroll="about">
+          <div class="container">
+            <div class="secTitle _anim-items">
+              <h4>Little Story <span>About</span> Me</h4>
+            </div>
+            <div id="story">
+              <div id="summary">
+                <p>
+                  I am a certified and experienced front-end developer. I have
+                  experience in creating mobile responsive web sites, SPA
+                  (single page applications). I also have experience in
+                  developing a websites from scratch with React and Angular.
+                </p>
+                <a
+                  href="https://www.canva.com/design/DAEoFlgKbW8/OuocymDn2CFv6jyMj9p6Pg/view?utm_content=DAEoFlgKbW8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                  target="_blank"
+                  class="darkScnd"
+                >
+                  Download Resume
+                </a>
+              </div>
+            </div>
           </div>
-          <div id="mainSkills">
-            <div id="progressSkill">
-              <div>
-                <h5><i style="color: #E44D26;" class="fab fa-html5"></i> <span>HTML5</span></h5>
-                <div class="progress"><span></span></div>
-              </div>
-              <div>
-                <h5><i style="color: #2965f1;" class="fab fa-css3-alt"></i> <span>CSS3</span></h5>
-                <div class="progress"><span></span></div>
-              </div>
-              <div>
-                <h5><i style="color: #F0DB4F;" class="fab fa-js-square"></i> <span>JavaScript / Jquery</span></h5>
-                <div class="progress"><span></span></div>
-              </div>
-              <div>
-                <h5><i style="color: #61DBFB;" class="fab fa-react"></i> <span>React</span></h5>
-                <div class="progress"><span></span></div>
-              </div>
-              <div>
-                <h5><i style="color: #dd1b16;" class="fab fa-angular"></i> <span>Angular</span></h5>
-                <div class="progress"><span></span></div>
-              </div>
-              <!-- <div>
+        </section>
+        <section class="darkMain" id="skills" data-scroll="skills">
+          <div class="container">
+            <div class="secTitle _anim-items">
+              <h4>Some of my <span>Skills</span></h4>
+            </div>
+            <div id="mainSkills">
+              <div id="progressSkill">
+                <div>
+                  <h5>
+                    <i style="color: #e44d26" class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                  </h5>
+                  <div class="progress"><span></span></div>
+                </div>
+                <div>
+                  <h5>
+                    <i style="color: #2965f1" class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                  </h5>
+                  <div class="progress"><span></span></div>
+                </div>
+                <div>
+                  <h5>
+                    <i style="color: #f0db4f" class="fab fa-js-square"></i>
+                    <span>JavaScript / Jquery</span>
+                  </h5>
+                  <div class="progress"><span></span></div>
+                </div>
+                <div>
+                  <h5>
+                    <i style="color: #61dbfb" class="fab fa-react"></i>
+                    <span>React</span>
+                  </h5>
+                  <div class="progress"><span></span></div>
+                </div>
+                <div>
+                  <h5>
+                    <i style="color: #dd1b16" class="fab fa-angular"></i>
+                    <span>Angular</span>
+                  </h5>
+                  <div class="progress"><span></span></div>
+                </div>
+                <!-- <div>
                 <h5><i style="color: rgb(177, 177, 177);" class="fab fa-github-square"></i> <span>Git / Github</span></h5>
                 <div class="progress"><span></span></div>
               </div> -->
+              </div>
+              <div id="ringWrap">
+                <div>
+                  <div class="progressRing">
+                    <span>85%</span>
+                    <svg>
+                      <circle cx="60" cy="60" r="50"></circle>
+                      <circle cx="60" cy="60" r="50"></circle>
+                    </svg>
+                  </div>
+                  <h5>Communication</h5>
+                </div>
+                <div>
+                  <div class="progressRing">
+                    <span>90%</span>
+                    <svg>
+                      <circle cx="60" cy="60" r="50"></circle>
+                      <circle cx="60" cy="60" r="50"></circle>
+                    </svg>
+                  </div>
+                  <h5>Team Work</h5>
+                </div>
+                <div>
+                  <div class="progressRing">
+                    <span>65%</span>
+                    <svg>
+                      <circle cx="60" cy="60" r="50"></circle>
+                      <circle cx="60" cy="60" r="50"></circle>
+                    </svg>
+                  </div>
+                  <h5>Project Management</h5>
+                </div>
+                <div>
+                  <div class="progressRing">
+                    <span>70%</span>
+                    <svg>
+                      <circle cx="60" cy="60" r="50"></circle>
+                      <circle cx="60" cy="60" r="50"></circle>
+                    </svg>
+                  </div>
+                  <h5>Creativity</h5>
+                </div>
+              </div>
             </div>
-            <div id="ringWrap">
-              <div>
-                <div class="progressRing">
-                  <span>85%</span>
-                  <svg> 
-                    <circle cx='60' cy='60' r='50'></circle>
-                    <circle cx='60' cy='60' r='50'></circle> 
-                  </svg>
-                </div>
-                <h5>Communication</h5>
+            <div id="scndSkills">
+              <div class="secTitle _anim-items">
+                <h4>And some <span>Skills</span> More</h4>
               </div>
-              <div>
-                <div class="progressRing">
-                  <span>90%</span>
-                  <svg> 
-                    <circle cx='60' cy='60' r='50'></circle>
-                    <circle cx='60' cy='60' r='50'></circle> 
-                  </svg>
+              <div
+                id="scndSkills-items"
+                onmousedown="mDown(event)"
+                onmouseup="mUp(event)"
+                ontouchstart="tchStart(event)"
+                ontouchend="tchEnd(event)"
+              >
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/git.png" alt="" /></div>
+                  <p class="s-title">Git/Github</p>
                 </div>
-                <h5>Team Work</h5>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/sql.png" alt="" /></div>
+                  <p class="s-title">SQL (basics)</p>
+                </div>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/java.png" alt="" /></div>
+                  <p class="s-title">Java (basics)</p>
+                </div>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/boot.png" alt="" /></div>
+                  <p class="s-title">Bootstrap</p>
+                </div>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/mat.png" alt="" /></div>
+                  <p class="s-title">Materialize</p>
+                </div>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/ajax.png" alt="" /></div>
+                  <p class="s-title">Ajax</p>
+                </div>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/sass.png" alt="" /></div>
+                  <p class="s-title">Sass</p>
+                </div>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/vscode.png" alt="" /></div>
+                  <p class="s-title">VS code</p>
+                </div>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/pshop.png" alt="" /></div>
+                  <p class="s-title">Adobe Photoshop</p>
+                </div>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/office.png" alt="" /></div>
+                  <p class="s-title">Microsoft Office tools</p>
+                </div>
+                <div class="s-item darkScnd">
+                  <div class="s-icon"><img src="img/code-bg.png" alt="" /></div>
+                  <p class="s-title">Responsive Website</p>
+                </div>
               </div>
-              <div>
-                <div class="progressRing">
-                  <span>65%</span>
-                  <svg> 
-                    <circle cx='60' cy='60' r='50'></circle>
-                    <circle cx='60' cy='60' r='50'></circle>
-                  </svg>
-                </div>
-                <h5>Project Management</h5>
-              </div>
-              <div>
-                <div class="progressRing">
-                  <span>70%</span>
-                  <svg> 
-                    <circle cx='60' cy='60' r='50'></circle>
-                    <circle cx='60' cy='60' r='50'></circle> 
-                  </svg>
-                </div>
-                <h5>Creativity</h5>
+              <div id="sliderBtn">
+                <button class="btn-prev" onclick="skillsLeft()"></button>
+                <button class="btn-next" onclick="skillsRight()"></button>
               </div>
             </div>
           </div>
-          <div id="scndSkills">
+        </section>
+        <section class="darkMain" id="experience" data-scroll="experience">
+          <div class="container">
+            <div id="exp-wrap">
+              <div id="work-exp">
+                <div class="secTitle _anim-items">
+                  <h4>My Work <span>Experience</span></h4>
+                </div>
+                <div class="w-items">
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>User Acceptance Testing Group</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>12.2020 - present</p></div>
+                      <div class="w-company"><p>Azercell</p></div>
+                    </div>
+                    <div class="w-text">
+                      <p>
+                        Testing projects or products, finding bugs for
+                        debugging. Creating new projects to facilitate the work
+                        of our department.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Front End Developer</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>05.2021 - present</p></div>
+                      <div class="w-company"><p>Benzeine</p></div>
+                    </div>
+                    <div class="w-text">
+                      <p>Build React website, SPA from scratch.</p>
+                      <p>Creating, maintaining, debugging Angular projects</p>
+                    </div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Corporate Customer Support</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>04.2020 - 12.2020</p></div>
+                      <div class="w-company"><p>Azercell</p></div>
+                    </div>
+                    <div class="w-text">
+                      <p>
+                        Identifying customers needs, clarify information,
+                        research every issue and providing solutions. Managing
+                        large amounts of inbound and outbound calls in a timely
+                        manner.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Customer Support</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>05.2016 - 04.2020</p></div>
+                      <div class="w-company"><p>Azercell</p></div>
+                    </div>
+                    <div class="w-text">
+                      <p>
+                        Following call center rules when processing each
+                        individual topic. Member of Request Group, solving
+                        internal problems that came from our employees.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Customer Support</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>11.2015 - 05.2016</p></div>
+                      <div class="w-company"><p>ABC Telecom</p></div>
+                    </div>
+                    <div class="w-text">
+                      <p>
+                        Collected information about the needs of clients. Made
+                        suitable proposals based on this information
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="edu_exp">
+                <div class="secTitle _anim-items">
+                  <h4>My <span>Educational</span> Background</h4>
+                </div>
+                <div class="w-items">
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Front End Developer</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>11.2019 - 11.2020</p></div>
+                      <div class="w-company">
+                        <p title="Azerbaijan State Oil Academy">STEP IT</p>
+                      </div>
+                    </div>
+                    <div class="w-text">
+                      <p>
+                        Studied Front-End Development in Step IT Computer
+                        Academy.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Geophysicist</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>09.2010 - 06.2014</p></div>
+                      <div class="w-company">
+                        <p title="Azerbaijan State Oil Academy">ASOA</p>
+                      </div>
+                    </div>
+                    <div class="w-text">
+                      <p>
+                        Graduated from the Azerbaijan State Oil Academy. Studied
+                        at the faculty of Geophysics.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Product Management</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>04.2021</p></div>
+                      <div class="w-company">
+                        <p title="Azerbaijan State Oil Academy">
+                          Azercell Academy
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-text"><p></p></div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Stress Management</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>08.2020</p></div>
+                      <div class="w-company">
+                        <p title="Azerbaijan State Oil Academy">
+                          Azercell Academy
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-text"><p></p></div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Emotional Intelligence</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>06.2020</p></div>
+                      <div class="w-company">
+                        <p title="Azerbaijan State Oil Academy">
+                          Azercell Academy
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-text"><p></p></div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Presentation Skills</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>12.2019</p></div>
+                      <div class="w-company">
+                        <p title="Azerbaijan State Oil Academy">
+                          Azercell Academy
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-text"><p></p></div>
+                  </div>
+                  <div class="w-item darkScnd">
+                    <div>
+                      <h5>Fraud Awarnes</h5>
+                    </div>
+                    <div class="w-period">
+                      <div class="w-date"><p>11.2018</p></div>
+                      <div class="w-company">
+                        <p title="Azerbaijan State Oil Academy">
+                          Azercell Academy
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-text"><p></p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="darkMain" id="contact" data-scroll="contact">
+          <div class="container">
             <div class="secTitle _anim-items">
-              <h4>And some <span>Skills</span> More</h4>
+              <h4>Get <span>In</span> Touch</h4>
             </div>
-            <div id="scndSkills-items"
-            onmousedown="mDown(event)"
-            onmouseup="mUp(event)"
-            ontouchstart="tchStart(event)"
-            ontouchend="tchEnd(event)">
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/git.png" alt=""></div>
-                <p class="s-title">Git/Github</p>
+            <div id="contact-wrap">
+              <div id="c-main">
+                <div id="c-main-items" class="darkScnd">
+                  <div class="c-main-item">
+                    <div class="c-icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="c-info">
+                      <h6>Adress</h6>
+                      <p>Baku, Azerbaijan</p>
+                    </div>
+                  </div>
+                  <div class="c-main-item">
+                    <div class="c-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="c-info">
+                      <h6>Email</h6>
+                      <p>
+                        <a
+                          class="darkScnd"
+                          href="mailto:elchinhumbatov@yahoo.com"
+                          >elchinhumbatov@yahoo.com</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <div class="c-main-item">
+                    <div class="c-icon">
+                      <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="c-info">
+                      <h6>Phone</h6>
+                      <p>
+                        <a class="darkScnd" href="tel:994502312297"
+                          >+994502312297</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <div id="social">
+                    <a
+                      class="darkScnd"
+                      target="_blank"
+                      href="https://www.facebook.com/elchin.humbetov/"
+                      ><i class="fab fa-facebook"></i
+                    ></a>
+                    <a
+                      class="darkScnd"
+                      target="_blank"
+                      href="http://linkedin.com/in/elchin-humbatov-82065488"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a
+                      class="darkScnd"
+                      target="_blank"
+                      href="https://github.com/elchinhumbatov"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <a
+                      class="darkScnd"
+                      target="_blank"
+                      href="https://wa.me/994553875799"
+                      ><i class="fab fa-whatsapp"></i
+                    ></a>
+                  </div>
+                </div>
               </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/sql.png" alt=""></div>
-                <p class="s-title">SQL (basics)</p>
+              <div id="c-form">
+                <form
+                  action="https://formspree.io/f/xrgonawr"
+                  method="POST"
+                  class="darkScnd"
+                >
+                  <div class="form-control">
+                    <input
+                      class="darkScnd"
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <input
+                      class="darkScnd"
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <input
+                      class="darkScnd"
+                      type="text"
+                      name="subject"
+                      placeholder="Subject"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <textarea
+                      class="darkScnd"
+                      name="message"
+                      rows="3"
+                      placeholder="Your Message"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-control">
+                    <button class="darkScnd" name="submit">Send</button>
+                  </div>
+                  <div id="form-status"></div>
+                  <div id="form-loader">Sending...</div>
+                </form>
               </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/java.png" alt=""></div>
-                <p class="s-title">Java (basics)</p>
-              </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/boot.png" alt=""></div>
-                <p class="s-title">Bootstrap</p>
-              </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/mat.png" alt=""></div>
-                <p class="s-title">Materialize</p>
-              </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/ajax.png" alt=""></div>
-                <p class="s-title">Ajax</p>
-              </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/sass.png" alt=""></div>
-                <p class="s-title">Sass</p>
-              </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/vscode.png" alt=""></div>
-                <p class="s-title">VS code</p>
-              </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/pshop.png" alt=""></div>
-                <p class="s-title">Adobe Photoshop</p>
-              </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/office.png" alt=""></div>
-                <p class="s-title">Microsoft Office tools</p>
-              </div>
-              <div class="s-item darkScnd">
-                <div class="s-icon"><img src="img/code-bg.png" alt=""></div>
-                <p class="s-title">Responsive Website</p>
-              </div>
-            </div>
-            <div id="sliderBtn">
-              <button class="btn-prev" onclick="skillsLeft()"></button>
-              <button class="btn-next" onclick="skillsRight()"></button>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="darkMain" id="experience" data-scroll='experience'>
+        </section>
+      </main>
+      <footer>
         <div class="container">
-          <div id="exp-wrap">
-            <div id="work-exp">
-              <div class="secTitle _anim-items">
-                <h4>My Work <span>Experience</span></h4>
-              </div>
-              <div class="w-items">
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>User Acceptance Testing Group</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>12.2020 - present</p></div>
-                    <div class="w-company"><p>Azercell</p></div>
-                  </div>
-                  <div class="w-text">
-                    <p>Testing projects or products, finding bugs for debugging. Creating new projects to facilitate the work of our department. </p>
-                  </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Front End Developer</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>05.2021 - present</p></div>
-                    <div class="w-company"><p>Benzeine</p></div>
-                  </div>
-                  <div class="w-text">
-                    <p>Build React website, SPA from scratch.</p>
-                    <p>Creating, maintaining, debugging Angular projects</p>
-                  </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Corporate Customer Support</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>04.2020 - 12.2020</p></div>
-                    <div class="w-company"><p>Azercell</p></div>
-                  </div>
-                  <div class="w-text">
-                    <p>Identifying customers needs, clarify information, research every issue and providing solutions. Managing large amounts of inbound and outbound calls in a timely manner.</p>
-                  </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Customer Support</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>05.2016 - 04.2020</p></div>
-                    <div class="w-company"><p>Azercell</p></div>
-                  </div>
-                  <div class="w-text">
-                    <p>Following call center rules when processing each individual topic. Member of Request Group, solving internal problems that came from our employees.</p>
-                  </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Customer Support</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>11.2015 - 05.2016</p></div>
-                    <div class="w-company"><p>ABC Telecom</p></div>
-                  </div>
-                  <div class="w-text">
-                    <p>Collected information about the needs of clients. Made suitable proposals based on this information</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="edu_exp">
-              <div class="secTitle _anim-items">
-                <h4>My <span>Educational</span> Background</h4>
-              </div>
-              <div class="w-items">
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Front End Developer</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>11.2019 - 11.2020</p></div>
-                    <div class="w-company"><p title="Azerbaijan State Oil Academy">STEP IT</p></div>
-                  </div>
-                  <div class="w-text">
-                    <p>Studied Front-End Development in Step IT Computer Academy. </p>
-                  </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Geophysicist</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>09.2010 - 06.2014</p></div>
-                    <div class="w-company"><p title="Azerbaijan State Oil Academy">ASOA</p></div>
-                  </div>
-                  <div class="w-text">
-                    <p>Graduated from the Azerbaijan State Oil Academy. Studied at the faculty of Geophysics.</p>
-                  </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Product Management</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>04.2021</p></div>
-                    <div class="w-company"><p title="Azerbaijan State Oil Academy">Azercell Academy</p></div>
-                  </div>
-                  <div class="w-text"> <p></p> </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Stress Management</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>08.2020</p></div>
-                    <div class="w-company"><p title="Azerbaijan State Oil Academy">Azercell Academy</p></div>
-                  </div>
-                  <div class="w-text"> <p></p> </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Emotional Intelligence</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>06.2020</p></div>
-                    <div class="w-company"><p title="Azerbaijan State Oil Academy">Azercell Academy</p></div>
-                  </div>
-                  <div class="w-text"> <p></p> </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Presentation Skills</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>12.2019</p></div>
-                    <div class="w-company"><p title="Azerbaijan State Oil Academy">Azercell Academy</p></div>
-                  </div>
-                  <div class="w-text"> <p></p> </div>
-                </div>
-                <div class="w-item darkScnd">
-                  <div>
-                    <h5>Fraud Awarnes</h5>
-                  </div>
-                  <div class="w-period">
-                    <div class="w-date"><p>11.2018</p></div>
-                    <div class="w-company"><p title="Azerbaijan State Oil Academy">Azercell Academy</p></div>
-                  </div>
-                  <div class="w-text"> <p></p> </div>
-                </div>
-              </div>
-            </div>
+          <div class="darkMain">
+            <p>Copyright © 2021. All Right Reserved.</p>
           </div>
         </div>
-      </section>
-      <section class="darkMain" id="contact" data-scroll='contact'>
-        <div class="container">
-          <div class="secTitle _anim-items">
-            <h4>Get <span>In</span> Touch</h4>
-          </div>
-          <div id="contact-wrap">
-            <div id="c-main">
-              <div id="c-main-items" class="darkScnd">
-                <div class="c-main-item">
-                  <div class="c-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div class="c-info">
-                    <h6>Adress</h6>
-                    <p>Baku, Azerbaijan</p>
-                  </div>
-                </div>
-                <div class="c-main-item">
-                  <div class="c-icon">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                  <div class="c-info">
-                    <h6>Email</h6>
-                    <p><a class="darkScnd" href="mailto:elchinhumbatov@yahoo.com">elchinhumbatov@yahoo.com</a></p>
-                  </div>
-                </div>
-                <div class="c-main-item">
-                  <div class="c-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                  </div>
-                  <div class="c-info">
-                    <h6>Phone</h6>
-                    <p><a class="darkScnd" href="tel:994502312297">+994502312297</a></p>
-                  </div>
-                </div>
-                <div id="social">
-                  <a class="darkScnd" target="_blank" href="https://www.facebook.com/elchin.humbetov/"><i class="fab fa-facebook"></i></a>
-                  <a class="darkScnd" target="_blank" href="http://linkedin.com/in/elchin-humbatov-82065488"><i class="fab fa-linkedin-in"></i></a>
-                  <a class="darkScnd" target="_blank" href="https://github.com/elchinhumbatov"><i class="fab fa-github"></i></a>
-                  <a class="darkScnd" target="_blank" href="https://wa.me/994553875799"><i class="fab fa-whatsapp"></i></a>
-                </div>
-              </div>
-            </div>
-            <div id="c-form">
-              <form action="https://formspree.io/f/xrgonawr" method="POST" class="darkScnd">
-                <div class="form-control">
-                  <input class="darkScnd" type="text" name="name" placeholder="Your Name" required />
-                </div>
-                <div class="form-control">
-                  <input class="darkScnd" type="email" name="email" placeholder="Your Email" required />
-                </div>
-                <div class="form-control">
-                  <input class="darkScnd" type="text" name="subject" placeholder="Subject" />
-                </div>
-                <div class="form-control">
-                  <textarea class="darkScnd" name="message" rows="3" placeholder="Your Message" required ></textarea>
-                </div>
-                <div class="form-control">
-                  <button class="darkScnd" name="submit">Send</button>
-                </div>
-                <div id="form-status"></div>
-                <div id="form-loader">Sending...</div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container">
-        <div class="darkMain">
-          <p>Copyright © 2021. All Right Reserved.</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
 
-    <div id="tabbar" class="darkMain">
-      <a class="active darkMain" data-link='home' href="#home"><i class="fas fa-home"></i><br/>Home</a>
-      <a class="darkMain" data-link='about' href="#about"><i class="fas fa-user"></i><br/>About</a>
-      <a class="darkMain" data-link='skills' href="#skills"><i class="fas fa-tools"></i><br/>Skills</a>
-      <a class="darkMain" data-link='experience' href="#experience"><i class="fas fa-graduation-cap"></i><br/>Expc</a>
-      <a class="darkMain" data-link='contact' href="#contact"><i class="fas fa-address-book"></i><br/>Contact</a>
+      <div id="tabbar" class="darkMain">
+        <a class="active darkMain" data-link="home" href="#home"
+          ><i class="fas fa-home"></i><br />Home</a
+        >
+        <a class="darkMain" data-link="about" href="#about"
+          ><i class="fas fa-user"></i><br />About</a
+        >
+        <a class="darkMain" data-link="skills" href="#skills"
+          ><i class="fas fa-tools"></i><br />Skills</a
+        >
+        <a class="darkMain" data-link="experience" href="#experience"
+          ><i class="fas fa-graduation-cap"></i><br />Expc</a
+        >
+        <a class="darkMain" data-link="contact" href="#contact"
+          ><i class="fas fa-address-book"></i><br />Contact</a
+        >
+      </div>
+      <div id="progressbar"></div>
+      <div id="toTop" onclick="goTop()" class="darkScnd"></div>
     </div>
-    <div id="progressbar"></div>
-    <div id="toTop" onclick="goTop()" class="darkScnd"></div>
-  </div>
-</body>
+  </body>
 </html>
