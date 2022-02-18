@@ -12,6 +12,59 @@ let themeCounter = 0;
 let count = 0;
 let skillsX1;
 
+$(document).ready(function(){
+  $('#scndSkills-items').slick({
+    dots: true,
+    infinite: true,
+    arrows: false,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+        }
+      },
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5
+        }
+      },
+      {
+        breakpoint: 780,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
 
 function themeToggle() {
   themeCounter++;
@@ -128,46 +181,46 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 
-function skillsRight(prop) {
-  let itemCount = Math.trunc($('#scndSkills-items').width() / 150);
-  count++;
-  if (prop) {
-    console.log('some');
-  }
-  if (items.length - count * itemCount <= itemCount) {
-    for (let i = 0; i < items.length; i++) {
-      items[i].style.transform='translate('+(items.length - itemCount) * -150 +'px, 0)';
-    }
-    count--;
-  }
-  else {
-    for (let i = 0; i < items.length; i++) {
-      items[i].style.transform='translate('+(itemCount * count * -150)+'px, 0)';
-    }
-  }
-}
-function skillsLeft() {
-  let itemCount = Math.trunc($('#scndSkills-items').width() / 150);
-  count--;
-  if (count < 0) count = 0;
-  for (let i = 0; i < items.length; i++) {
-    items[i].style.transform='translate('+(itemCount*count*-150)+'px, 0)';
-  }
-}
-function mDown(e) {
-  skillsX1 = e.clientX;
-  $('#scndSkills-items').css('cursor', 'grabbing');
-}
-function mUp(e) {
-  if (skillsX1 - 50 >= e.clientX ) skillsRight();
-  else if (skillsX1 + 50 <= e.clientX ) skillsLeft();
-  $('#scndSkills-items').css('cursor', 'grab');
-}
-function tchStart(e) {
-  skillsX1 = e.touches[0].clientX;
-}
-function tchEnd(e) {
-  let x2 = e.changedTouches[0].clientX;
-  if (skillsX1 - 30 >= x2) skillsRight();
-  else if (skillsX1 + 30 <= x2) skillsLeft();
-}
+// function skillsRight(prop) {
+//   let itemCount = Math.trunc($('#scndSkills-items').width() / 150);
+//   count++;
+//   if (prop) {
+//     console.log('some');
+//   }
+//   if (items.length - count * itemCount <= itemCount) {
+//     for (let i = 0; i < items.length; i++) {
+//       items[i].style.transform='translate('+(items.length - itemCount) * -150 +'px, 0)';
+//     }
+//     count--;
+//   }
+//   else {
+//     for (let i = 0; i < items.length; i++) {
+//       items[i].style.transform='translate('+(itemCount * count * -150)+'px, 0)';
+//     }
+//   }
+// }
+// function skillsLeft() {
+//   let itemCount = Math.trunc($('#scndSkills-items').width() / 150);
+//   count--;
+//   if (count < 0) count = 0;
+//   for (let i = 0; i < items.length; i++) {
+//     items[i].style.transform='translate('+(itemCount*count*-150)+'px, 0)';
+//   }
+// }
+// function mDown(e) {
+//   skillsX1 = e.clientX;
+//   $('#scndSkills-items').css('cursor', 'grabbing');
+// }
+// function mUp(e) {
+//   if (skillsX1 - 50 >= e.clientX ) skillsRight();
+//   else if (skillsX1 + 50 <= e.clientX ) skillsLeft();
+//   $('#scndSkills-items').css('cursor', 'grab');
+// }
+// function tchStart(e) {
+//   skillsX1 = e.touches[0].clientX;
+// }
+// function tchEnd(e) {
+//   let x2 = e.changedTouches[0].clientX;
+//   if (skillsX1 - 30 >= x2) skillsRight();
+//   else if (skillsX1 + 30 <= x2) skillsLeft();
+// }

@@ -5,8 +5,8 @@ i.fas {font-family: "Font Awesome 5 Free" !important;}
 :root {
   --darkMain: #303236;
   --darkScnd: #3c3e41;
-  --lightMain: #fffefc;
-  --lightScnd: #d9d9d9;
+  --lightMain: #e9e9e9;
+  --lightScnd: #dddddd;
   --yellow: #f4a328;
 }
 .container { max-width: 1024px; margin: auto; }
@@ -179,6 +179,7 @@ nav {
   align-items: center;
   padding: 30px 5%;
   /* background: var(--darkMain); */
+  box-shadow: 0 0 15px rgba(0, 0, 0, .7);
   transition: background .5s linear, box-shadow .5s linear;
 }
 #logo a {
@@ -252,6 +253,7 @@ header ul a.active { color: var(--yellow); }
   display: inline-block;
   margin: 50px 0 0;
   padding: 10px 15px 10px 40px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .5);
   transition: background .5s ease;
 }
 #summary a:hover {background: var(--yellow);}
@@ -351,14 +353,15 @@ header ul a.active { color: var(--yellow); }
 .ring2 { stroke-dashoffset: 31.5 !important; }
 .ring3 { stroke-dashoffset: 110 !important; }
 .ring4 { stroke-dashoffset: 94 !important; }
-.bar1 {width: 80% !important;}
+
+.bar1 {width: 75% !important;}
 .bar2 {width: 80% !important;}
 .bar3 {width: 70% !important;}
 .bar4 {width: 80% !important;}
-.bar5 {width: 70% !important;}
+.bar5 {width: 80% !important;}
 
 #scndSkills-items {
-  display: flex;
+  /* display: flex; */
   overflow: hidden;
   margin: 0 10px;
   cursor: grab;
@@ -369,11 +372,31 @@ header ul a.active { color: var(--yellow); }
   -moz-user-select: none;
   -ms-user-select: none;
 }
+#scndSkills-items .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#scndSkills-items .slick-dots li {
+  margin: 0 5px;
+}
+#scndSkills-items .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 16px;
+  background-color: silver;
+  border-radius: 50%;
+  border: 2px solid silver;
+}
+#scndSkills-items .slick-dots li.slick-active button {
+  border: 2px solid black;
+}
 .s-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  min-width: 100px;
+  justify-content: space-between;
+  /* min-width: 100px; */
+  min-height: 120px !important;
   margin: 25px;
   padding: 10px 5px;
   text-align: center;
@@ -390,7 +413,7 @@ header ul a.active { color: var(--yellow); }
   align-items: center;
   height: 50px;
 }
-.s-icon img {width: 50%;}
+.s-icon img {width: 40%;}
 .s-title {
   font-size: .8em;
   line-height: 1.3em;
