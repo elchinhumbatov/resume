@@ -6,7 +6,6 @@ let navLinks = document.querySelectorAll('nav ul a');
 let progressbar = document.querySelector('#progressbar');
 let toTop = document.querySelector('#toTop');
 var form = document.querySelector("#c-form form");
-let shadow = document.querySelector('#shadow');
 let items = $('.s-item');
 let themeCounter = 0;
 let count = 0;
@@ -71,12 +70,10 @@ function themeToggle() {
   if (themeCounter%2) {
     darkMain.forEach(item => item.classList.add('lightMain'));
     darkScnd.forEach(item => item.classList.add('lightScnd'));
-    shadow.style.background = "linear-gradient(to top, var(--lightScnd), transparent)";
     navLinks.forEach(link => link.style.color = 'var(--darkMain)');
   } else {
     darkMain.forEach(item => item.classList.remove('lightMain'));
     darkScnd.forEach(item => item.classList.remove('lightScnd'));
-    shadow.style.background = "linear-gradient(to top, var(--darkMain), transparent)";
     navLinks.forEach(link => link.style.color = 'var(--lightMain)');
   }
 }
@@ -151,8 +148,8 @@ function goTop() { window.scrollTo(0, 0) }
 async function handleSubmit(event) {
   event.preventDefault();
   let loader = document.querySelector('#form-loader');
+  loader.innerHTML = 'Sending...';
   loader.style.display = 'flex';
-  let status = document.getElementById("form-status");
   let data = new FormData(event.target);
   fetch(event.target.action, {
     method: form.method,
@@ -160,23 +157,16 @@ async function handleSubmit(event) {
     headers: {
         'Accept': 'application/json'
     }
-  }).then(response => {
-    loader.style.display = 'none';
-    status.classList.add('succes');
-    status.innerHTML = "Thanks for your message!";
-    reset('succes');
-    form.reset('succes');
-  }).catch(error => {
-    loader.style.display = 'none';
-    status.classList.add('error');
-    status.innerHTML = "Oops! Something went wrong...";
-    reset('error');
-  });
-  function reset(_status) {
+  })
+  .then(res => {loader.innerHTML = "Thanks for your message!"; form.reset('succes')})
+  .catch(error => {loader.innerHTML = "Oops! Something went wrong..." })
+  .finally(() => {resetLoader()});
+  
+  function resetLoader() {
     setTimeout(() => {
-      status.classList.remove(_status);
-      status.innerHTML = "";
-    }, 3000);
+      loader.style.display = 'none';
+      loader.innerHTML = "";
+    }, 2000);
   }
 }
 form.addEventListener("submit", handleSubmit);

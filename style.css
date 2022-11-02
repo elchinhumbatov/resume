@@ -16,28 +16,16 @@ i.fas {font-family: "Font Awesome 5 Free" !important;}
 .lightScnd {background-color: var(--lightScnd); color: var(--darkMain);}
 
 #themeSwitcher {
-  position: relative;
-  width: 35px;
-  height: 12px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #000;
+  width: 18px;
+  height: 18px;
+  margin-left: 7px;
   cursor: pointer;
+  background: url('img/moon-solid.svg') center/cover no-repeat;
 }
-#themeSwitcher.darkMain::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -2px;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #000;
-  background: black url('img/moon-solid.svg') center/70% no-repeat;
-  transition: left .2s linear;
-}
-#themeSwitcher.lightMain::before {
-  left: 20px;
-  background: rgb(172, 170, 170) url('img/sun-solid.svg') center/70% no-repeat;
+
+#themeSwitcher.lightMain {
+  background: url('img/sun-solid.svg') center/cover no-repeat;
+  transform: scale(1.1);
 }
 #progressbar {
   position: fixed;
@@ -159,15 +147,9 @@ header ._anim-items._active, .secTitle._active {
 header {
   height: 100vh;
   position: relative;
-  background: url('img/header-bg1.jpeg') left/cover no-repeat;
+  background: gradient(var(--darkMain),var(--darkScnd));
   background-attachment: fixed;
-}
-#shadow {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 30vh;
-  background: linear-gradient(to top, var(--darkMain), transparent);
+  overflow-y: hidden;
 }
 nav {
   position: fixed;
@@ -178,7 +160,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 30px 5%;
-  /* background: var(--darkMain); */
   box-shadow: 0 0 15px rgba(0, 0, 0, .7);
   transition: background .5s linear, box-shadow .5s linear;
 }
@@ -212,7 +193,6 @@ header ul a.active { color: var(--yellow); }
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--lightMain);
   top: 50%;
   left: 50%;
   width: 80%;
@@ -237,8 +217,16 @@ header ul a.active { color: var(--yellow); }
   border-radius: 50%;
   margin: 0 30px 0 0;
   background: linear-gradient(0deg, rgba(97, 97, 97, .3), rgba(97, 97, 97, .3)), url('img/mee.jpg') left/cover no-repeat;
-  /* background: url('img/me.png') left/cover no-repeat, linear-gradient(290deg, rgb(150, 150, 150), rgb(17, 17, 17)); */
-  /* background: url('img/me.png') left/cover no-repeat, linear-gradient(290deg, rgb(255, 255, 255),rgb(214, 214, 214), rgb(17, 17, 17)); */
+  border: 3px solid var(--yellow);
+}
+#scroll-down a {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background: url('img/chevron-up-solid.svg') center/cover no-repeat;
+  transform: rotate(180deg);
 }
 /*                                                                      ABOUT */
 
@@ -282,16 +270,21 @@ header ul a.active { color: var(--yellow); }
 #progressSkill {
   padding: 0 30px;
 }
+#progressSkill .ps-item {
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform .5s ease;
+}
+#progressSkill .ps-item:hover {
+  transform: scale(1.05);
+}
 #progressSkill i {font-size: 1.5em;}
-#progressSkill h5 {
-  margin: 30px 5px 10px;
-}
-#progressSkill h5 span {
-  vertical-align: text-top;
-}
+#progressSkill h5 {margin: 0 5px 10px;}
+#progressSkill h5 span {vertical-align: text-top;}
 .progress {
   position: relative;
-  width: 80%;
+  /* width: 80%; */
   height: 15px;
   background: #000;
   border-radius: 20px;
@@ -359,8 +352,7 @@ header ul a.active { color: var(--yellow); }
 .bar1 {width: 75% !important;}
 .bar2 {width: 80% !important;}
 .bar3 {width: 70% !important;}
-.bar4 {width: 80% !important;}
-.bar5 {width: 80% !important;}
+.bar4 {width: 90% !important;}
 
 #scndSkills-items {
   /* display: flex; */
@@ -434,6 +426,80 @@ header ul a.active { color: var(--yellow); }
 }
 .btn-prev {background: #666 url('img/caret-left-solid.svg') center no-repeat;}
 .btn-next {background: #666 url('img/caret-right-solid.svg') center no-repeat;}
+
+/*                                                                       Skills */
+#portfolio {
+  min-height: 100vh;
+}
+#portfolio #portfolio-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+#portfolio .portfolio-box {
+  position: relative;
+  border-radius: 15px;
+  /* padding: 20px; */
+  transition: transform .5s ease;
+  width: 45%;
+  text-align: center;
+}
+#portfolio .portfolio-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, .5);
+}
+#portfolio .portfolio-box img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 15px;
+}
+#portfolio .box-content {
+  display: none;
+  /* display: inline-block; */
+  color: #fff;
+  transition: transform .5s ease;
+}
+#portfolio .portfolio-box:hover .box-content {
+  display: inline-block;
+}
+#portfolio .portfolio-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5), rgba(0,0,0, .8));
+}
+#portfolio .box-content .text-box {
+  position: absolute;
+  bottom: 30px;
+  left: 30%;
+  transform: translate(-50%, 0);
+  text-align: left;
+  border-radius: 15px;
+}
+.text-box h5 {
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 7px;
+}
+.text-box p {
+  font-size: .8em;
+}
+#portfolio .stack {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#portfolio .stack img {
+  width: 20px;
+  margin: 8px 0;
+}
 
 /*                                                                    experience */
 
@@ -618,6 +684,8 @@ footer p {
   #contact-wrap {display: block; padding: 0;}
   #contact-wrap>div {width: 70%;}
   #c-main-items {width: 90%;}
+  #portfolio .box-content .text-box {left: 40%;}
+  #portfolio .box-content {display: inline-block}
 }
 @media screen and (max-width: 600px) {
   header {height: 90vh; background-attachment: scroll;}
@@ -639,4 +707,6 @@ footer p {
   #tabbar {display: flex;}
   #toTop {bottom: 120px;}
   footer {font-size: 0; margin: 100px 0 0 0;}
+  #portfolio #portfolio-boxes {justify-content: center;}
+  #portfolio .portfolio-box {width: 90%;}
 }

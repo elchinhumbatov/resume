@@ -12,7 +12,8 @@
     <title>Elchin's Resume</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="slick.css"/>
+    <link rel="stylesheet" href="headerAnim.css" />
+    <link rel="stylesheet" type="text/css" href="slick.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <script
@@ -27,23 +28,17 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <!-- <div id="theme">
-    <div id="dark_wrap" class="col_wrap" onclick="darkTheme()">
-      <div>
-        <h1>Dark Version</h1>
-        <img src="img/dark.png" alt="">
-      </div>
-    </div>
-    <div id="light_wrap" class="col_wrap" onclick="lightTheme()">
-      <div>
-        <h1>Light Version</h1>
-        <img src="img/light.png" alt="">
-      </div>
-    </div>
-  </div> -->
     <div id="my-body" class="darkMain">
       <header>
-        <div id="shadow"></div>
+        <div class="header-anim-light hax1"></div>
+        <div class="header-anim-light hax2"></div>
+        <div class="header-anim-light hax3"></div>
+        <div class="header-anim-light hax4"></div>
+        <div class="header-anim-light hax5"></div>
+        <div class="header-anim-light hax6"></div>
+        <div class="header-anim-light hax7"></div>
+        <div class="header-anim-light hax8"></div>
+        <div class="header-anim-light hax9"></div>
         <section data-scroll="home" id="home">
           <div class="container">
             <nav class="darkMain">
@@ -56,9 +51,8 @@
                 </li>
                 <li><a data-link="about" href="#about">About</a></li>
                 <li><a data-link="skills" href="#skills">Skills</a></li>
-                <li>
-                  <a data-link="experience" href="#experience">Experience</a>
-                </li>
+                <li><a data-link="portfolio" href="#portfolio">Portfolio</a></li>
+                <li><a data-link="experience" href="#experience">Experience</a></li>
                 <li><a data-link="contact" href="#contact">Contact</a></li>
                 <li>
                   <div
@@ -74,9 +68,10 @@
               <div id="title_text">
                 <span class="_anim-items _anim-norepeat">Hello! I'm</span>
                 <h3 class="_anim-items _anim-norepeat">Elchin Humbatov</h3>
-                <p class="_anim-items _anim-norepeat">Web Developer</p>
+                <p class="_anim-items _anim-norepeat">Front End Developer</p>
               </div>
             </div>
+            <div id="scroll-down"><a href="#about"></a></div>
           </div>
         </section>
       </header>
@@ -92,14 +87,15 @@
                   I am a certified and experienced front-end developer. I have
                   experience in creating mobile responsive web sites, SPA with
                   React and Angular. I also have experience in developing the
-                  mobile applications using React Native. Have a great desire to develop and learn something new.
+                  mobile applications using React Native. Have a great desire to
+                  develop and learn something new.
                 </p>
                 <a
                   href="https://www.canva.com/design/DAEoFlgKbW8/OuocymDn2CFv6jyMj9p6Pg/view?utm_content=DAEoFlgKbW8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
                   target="_blank"
                   class="darkScnd"
                 >
-                  Download Resume
+                  Resume for print
                 </a>
               </div>
             </div>
@@ -112,38 +108,32 @@
             </div>
             <div id="mainSkills">
               <div id="progressSkill">
-                <div>
+                <div class="ps-item darkScnd">
                   <h5>
                     <i style="color: #f0db4f" class="fab fa-js-square"></i>
                     <span>JavaScript</span>
                   </h5>
                   <div class="progress"><span></span></div>
                 </div>
-                <div>
+                <div class="ps-item darkScnd">
                   <h5>
                     <i style="color: #61dbfb" class="fab fa-react"></i>
                     <span>React</span>
                   </h5>
                   <div class="progress"><span></span></div>
                 </div>
-                <div>
+                <div class="ps-item darkScnd">
                   <h5>
                     <i style="color: #dd1b16" class="fab fa-angular"></i>
                     <span>Angular</span>
                   </h5>
                   <div class="progress"><span></span></div>
                 </div>
-                <div>
+                <div class="ps-item darkScnd">
                   <h5>
-                    <i style="color: #e44d26" class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                  </h5>
-                  <div class="progress"><span></span></div>
-                </div>
-                <div>
-                  <h5>
+                    <i style="color: #e44d26" class="fab fa-html5"></i> 
                     <i style="color: #2965f1" class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
+                    <span>HTML5 & CSS3</span>
                   </h5>
                   <div class="progress"><span></span></div>
                 </div>
@@ -195,11 +185,37 @@
               <div class="secTitle _anim-items">
                 <h4>And some <span>Skills</span> More</h4>
               </div>
-              <div id="scndSkills-items" >
-                <!-- onmousedown="mDown(event)"
-                onmouseup="mUp(event)"
-                ontouchstart="tchStart(event)"
-                ontouchend="tchEnd(event)" -->
+              <div id="scndSkills-items">
+                <div>
+                  <div class="s-item darkScnd">
+                    <div class="s-icon"><img src="img/react.png" alt="" /></div>
+                    <p class="s-title">React Native</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="s-item darkScnd">
+                    <div class="s-icon"><img src="img/vue.png" alt="" /></div>
+                    <p class="s-title">Vue.js</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="s-item darkScnd">
+                    <div class="s-icon"><img style="width: 30%;" src="img/figma.svg" alt="" /></div>
+                    <p class="s-title">Figma</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="s-item darkScnd">
+                    <div class="s-icon"><img src="img/next.png" alt="" /></div>
+                    <p class="s-title">Next.js</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="s-item darkScnd">
+                    <div class="s-icon"><img src="img/ts.png" alt="" /></div>
+                    <p class="s-title">TypeScript</p>
+                  </div>
+                </div>
                 <div>
                   <div class="s-item darkScnd">
                     <div class="s-icon"><img src="img/git.png" alt="" /></div>
@@ -208,69 +224,183 @@
                 </div>
                 <div>
                   <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/sql.png" alt="" /></div>
-                  <p class="s-title">SQL (basics)</p>
-                </div>
-                </div>
-                <div>
-                  <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/java.png" alt="" /></div>
-                  <p class="s-title">Java (basics)</p>
-                </div>
+                    <div class="s-icon"><img src="img/sql.png" alt="" /></div>
+                    <p class="s-title">SQL (basics)</p>
+                  </div>
                 </div>
                 <div>
                   <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/boot.png" alt="" /></div>
-                  <p class="s-title">Bootstrap</p>
-                </div>
-                </div>
-                <div>
-                  <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/mat.png" alt="" /></div>
-                  <p class="s-title">Materialize</p>
-                </div>
+                    <div class="s-icon"><img src="img/java.png" alt="" /></div>
+                    <p class="s-title">Java (basics)</p>
+                  </div>
                 </div>
                 <div>
                   <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/ajax.png" alt="" /></div>
-                  <p class="s-title">Ajax</p>
-                </div>
-                </div>
-                <div>
-                  <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/sass.png" alt="" /></div>
-                  <p class="s-title">Sass</p>
-                </div>
+                    <div class="s-icon"><img src="img/boot.png" alt="" /></div>
+                    <p class="s-title">Bootstrap</p>
+                  </div>
                 </div>
                 <div>
                   <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/vscode.png" alt="" /></div>
-                  <p class="s-title">VS code</p>
-                </div>
-                </div>
-                <div>
-                  <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/pshop.png" alt="" /></div>
-                  <p class="s-title">Adobe Photoshop</p>
-                </div>
+                    <div class="s-icon"><img src="img/mat.png" alt="" /></div>
+                    <p class="s-title">Materialize</p>
+                  </div>
                 </div>
                 <div>
                   <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/office.png" alt="" /></div>
-                  <p class="s-title">Microsoft Office tools</p>
-                </div>
+                    <div class="s-icon"><img src="img/ajax.png" alt="" /></div>
+                    <p class="s-title">Ajax</p>
+                  </div>
                 </div>
                 <div>
                   <div class="s-item darkScnd">
-                  <div class="s-icon"><img src="img/code-bg.png" alt="" /></div>
-                  <p class="s-title">Responsive Website</p>
+                    <div class="s-icon"><img src="img/sass.png" alt="" /></div>
+                    <p class="s-title">Sass</p>
+                  </div>
                 </div>
+                <div>
+                  <div class="s-item darkScnd">
+                    <div class="s-icon">
+                      <img src="img/vscode.png" alt="" />
+                    </div>
+                    <p class="s-title">VS code</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="s-item darkScnd">
+                    <div class="s-icon">
+                      <img src="img/code-bg.png" alt="" />
+                    </div>
+                    <p class="s-title">Responsive Website</p>
+                  </div>
                 </div>
               </div>
-              <!-- <div id="sliderBtn">
-                <button class="btn-prev" onclick="skillsLeft()"></button>
-                <button class="btn-next" onclick="skillsRight()"></button>
-              </div> -->
+            </div>
+          </div>
+        </section>
+        <section class="darkMain" id="portfolio" data-scroll="portfolio">
+          <div class="container">
+            <div class="secTitle _anim-items">
+              <h4>My <span>Portfolio</span></h4>
+            </div>
+            <div id="portfolio-boxes">
+              <div class="portfolio-box">
+                <img src="./img/mocups/tapoyren.png" alt="tapoyren">
+                <a href="https://tapoyren.com/" target="_blank" class="box-content">
+                  <div class="portfolio-shadow"></div>
+                  <div class="text-box">
+                    <h5 class="box-title">TapOyren</h5>
+                    <p>TapOyrən is an online learning platform</p>
+                  </div>
+                  <div class="stack">
+                    <img src="img/react.png" alt="react" title="React">
+                    <img src="img/html.png" alt="HTML" title="HTML">
+                    <img src="img/css.png" alt="CSS" title="CSS">
+                    <img src="img/js.png" alt="JavaScript" title="JavaScript">
+                    <img src="img/i18n.png" alt="react" title="i18n">
+                  </div>
+                </a>
+              </div>
+              <div class="portfolio-box">
+                <img src="./img/mocups/morooq.png" alt="morooq">
+                <a href="https://morooq.com/" target="_blank" class="box-content">
+                  <div class="portfolio-shadow"></div>
+                  <div class="text-box">
+                    <h5 class="box-title">Morooq</h5>
+                    <p>Online trial IELTS exams platform</p>
+                  </div>
+                  <div class="stack">
+                    <img src="img/angular.png" alt="angular" title="Angular">
+                    <img src="img/html.png" alt="HTML" title="HTML">
+                    <img src="img/css.png" alt="CSS" title="CSS">
+                    <img src="img/ts.png" alt="TypeScript" title="TypeScript">
+                    <img src="img/ngrx.png" alt="ngrx" title="NGRX">
+                  </div>
+                </a>
+              </div>
+              <div class="portfolio-box">
+                <img src="./img/mocups/dcs.png" alt="DCS">
+                <a href="https://dcsdubai.com/" target="_blank" class="box-content">
+                  <div class="portfolio-shadow"></div>
+                  <div class="text-box">
+                    <h5 class="box-title">DCS Dubai</h5>
+                    <p>Dance clothes, shoes & accessories.</p>
+                  </div>
+                  <div class="stack">
+                    <img src="img/vue.png" alt="vue" title="Vue.js">
+                    <img src="img/html.png" alt="HTML" title="HTML">
+                    <img src="img/css.png" alt="CSS" title="CSS">
+                    <img src="img/js.png" alt="TypeScript" title="JavaScript">
+                    <img src="img/graph.png" alt="graph" title="GraphQL">
+                  </div>
+                </a>
+              </div>
+              <div class="portfolio-box">
+                <img src="./img/mocups/splitter.png" alt="splitter">
+                <a href="https://elchinhumbatov.github.io/splitter/" target="_blank" class="box-content">
+                  <div class="portfolio-shadow"></div>
+                  <div class="text-box">
+                    <h5 class="box-title">Splitter</h5>
+                    <p>Simple and beautiful tip calculator app.</p>
+                  </div>
+                  <div class="stack">
+                    <img src="img/react.png" alt="react" title="React">
+                    <img src="img/html.png" alt="HTML" title="HTML">
+                    <img src="img/css.png" alt="CSS" title="CSS">
+                    <img src="img/js.png" alt="TypeScript" title="JavaScript">
+                    <img src="img/figma.svg" alt="figma" title="Figma" style="width: 17px;">
+                  </div>
+                </a>
+              </div>
+              <div class="portfolio-box">
+                <img src="./img/mocups/flowers.png" alt="flowers">
+                <a href="https://elchinhumbatov.github.io/flowers/" target="_blank" class="box-content">
+                  <div class="portfolio-shadow"></div>
+                  <div class="text-box">
+                    <h5 class="box-title">Flowers</h5>
+                    <p>Simple and beautiful tip calculator app.</p>
+                  </div>
+                  <div class="stack">
+                    <img src="img/react.png" alt="react" title="React">
+                    <img src="img/html.png" alt="HTML" title="HTML">
+                    <img src="img/css.png" alt="CSS" title="CSS">
+                    <img src="img/js.png" alt="TypeScript" title="JavaScript">
+                    <img src="img/redux.png" alt="figma" title="Figma">
+                  </div>
+                </a>
+              </div>
+              <div class="portfolio-box">
+                <img src="./img/mocups/drops.png" alt="drops">
+                <a href="https://elchinhumbatov.github.io/e-basket/" target="_blank" class="box-content">
+                  <div class="portfolio-shadow"></div>
+                  <div class="text-box">
+                    <h5 class="box-title">E-basket</h5>
+                    <p>My very first project with Angular.</p>
+                  </div>
+                  <div class="stack">
+                    <img src="img/angular.png" alt="angular" title="Angular">
+                    <img src="img/html.png" alt="HTML" title="HTML">
+                    <img src="img/css.png" alt="CSS" title="CSS">
+                    <img src="img/js.png" alt="TypeScript" title="JavaScript">
+                  </div>
+                </a>
+              </div>
+              <div class="portfolio-box">
+                <img src="./img/mocups/summerfest.png" alt="drops">
+                <a href="https://elchinhumbatov.github.io/Summer-Fest/" target="_blank" class="box-content">
+                  <div class="portfolio-shadow"></div>
+                  <div class="text-box">
+                    <h5 class="box-title">E-basket</h5>
+                    <p>One of my first responsible template.</p>
+                  </div>
+                  <div class="stack">
+                    <img src="img/html.png" alt="HTML" title="HTML">
+                    <img src="img/css.png" alt="CSS" title="CSS">
+                    <img src="img/sass.png" alt="sass" title="SASS">
+                    <img src="img/jquery.png" alt="jquery" title="jQuery">
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -292,8 +422,9 @@
                     </div>
                     <div class="w-text">
                       <p>
-                        Preparing test cases, executing them and then preparing the test results. 
-                        Solving internal problems that came from our employees.
+                        Preparing test cases, executing them and then preparing
+                        the test results. Solving internal problems that came
+                        from our employees.
                       </p>
                     </div>
                   </div>
@@ -390,7 +521,10 @@
                       </div>
                     </div>
                     <div class="w-text">
-                      <p>Studied Front-End Development in Step IT Computer Academy.</p>
+                      <p>
+                        Studied Front-End Development in Step IT Computer
+                        Academy.
+                      </p>
                       <p>Practiced with acquired knowledge</p>
                     </div>
                   </div>
@@ -413,14 +547,19 @@
                   </div>
                   <div class="w-item darkScnd">
                     <div>
-                      <h5><a href="https://api.busuu.com/anon/certificates/e782994b44549a440e9998e2ff4c9392?utm_source=CRM&utm_group=ENG&utm_medium=CERTIFICATE_LEVEL&utm_campaign=CERTIFICATE_LEVEL" target="_blank" style="color: inherit; text-decoration: underline">Level B1 in English on Busuu</a></h5>
+                      <h5>
+                        <a
+                          href="https://api.busuu.com/anon/certificates/e782994b44549a440e9998e2ff4c9392?utm_source=CRM&utm_group=ENG&utm_medium=CERTIFICATE_LEVEL&utm_campaign=CERTIFICATE_LEVEL"
+                          target="_blank"
+                          style="color: inherit; text-decoration: underline"
+                          >Level B1 in English on Busuu</a
+                        >
+                      </h5>
                     </div>
                     <div class="w-period">
                       <div class="w-date"><p>04.2021</p></div>
                       <div class="w-company">
-                        <p title="Azerbaijan State Oil Academy">
-                          McGraw Hill
-                        </p>
+                        <p title="Azerbaijan State Oil Academy">McGraw Hill</p>
                       </div>
                     </div>
                     <div class="w-text"><p></p></div>
@@ -624,7 +763,7 @@
                     <button class="darkScnd" name="submit">Send</button>
                   </div>
                   <div id="form-status"></div>
-                  <div id="form-loader">Sending...</div>
+                  <div id="form-loader"></div>
                 </form>
               </div>
             </div>
@@ -649,6 +788,9 @@
         <a class="darkMain" data-link="skills" href="#skills"
           ><i class="fas fa-tools"></i><br />Skills</a
         >
+        <a class="darkMain" data-link="portfolio" href="#portfolio"
+          ><i class="fas fa-tools"></i><br />Portfolio</a
+        >
         <a class="darkMain" data-link="experience" href="#experience"
           ><i class="fas fa-graduation-cap"></i><br />Expc</a
         >
@@ -660,8 +802,14 @@
       <div id="toTop" onclick="goTop()" class="darkScnd"></div>
     </div>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
     <script type="text/javascript" src="slick.min.js"></script>
   </body>
 </html>
