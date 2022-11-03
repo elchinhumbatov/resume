@@ -232,17 +232,23 @@ header ul a.active { color: var(--yellow); }
 /*                                                                      ABOUT */
 
 #story {
-  width: 65%;
-  margin: auto;
+  /* width: 65%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
+  padding: 70px 20px 20px;
 }
-#summary {line-height: 2em;}
+/* #summary-anim {
+  width: 40%;
+  height: 100%;
+} */
+#summary {line-height: 2em; width: 50%;}
 #summary a {
   position: relative;
   display: inline-block;
   margin: 50px 0 0;
   padding: 10px 15px 10px 40px;
-  /* box-shadow: 0 0 25px rgba(0, 0, 0, .5); */
   transition: background .5s ease;
   border: 1px solid gray;
   border-radius: 7px;
@@ -679,7 +685,8 @@ footer p {
 
 
 @media screen and (max-width: 900px) {
-  #story {width: 80%;}
+  #story {flex-direction: column;}
+  #summary {margin-top: 20px; width: 80%;}
   #exp-wrap {display: block;}
   #exp-wrap>div {width: 100%; margin: auto; border: none;}
   #work-exp {margin: 0 auto 70px !important;}
@@ -699,6 +706,7 @@ footer p {
   #title { flex-direction: column; }
   #title_text span {border-radius: 20px 0 20px 20px;}
   #title_img {margin: 0;}
+  #story {padding: 20px;}
   #mainSkills {flex-direction: column;}
   #mainSkills>div {width: 100%;}
   .progressSkill {text-align: center;}
