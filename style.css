@@ -383,14 +383,14 @@ header ul a.active { color: var(--yellow); }
 }
 #scndSkills-items .slick-dots button {
   font-size: 0;
-  width: 10px;
+  width: 16px;
   height: 16px;
   background-color: silver;
   border-radius: 50%;
   border: 2px solid silver;
 }
 #scndSkills-items .slick-dots li.slick-active button {
-  border: 2px solid black;
+  background-color: transparent;
 }
 .s-item {
   display: flex;
