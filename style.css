@@ -217,7 +217,7 @@ header ul a.active { color: var(--yellow); }
   height: 200px;
   border-radius: 50%;
   margin: 0 30px 0 0;
-  background: linear-gradient(0deg, rgba(97, 97, 97, .3), rgba(97, 97, 97, .3)), url('img/mee.jpg') left/cover no-repeat;
+  background: linear-gradient(0deg, rgba(97, 97, 97, .3), rgba(97, 97, 97, .3)), url('img/me.jpeg') left/cover no-repeat;
   border: 3px solid var(--yellow);
 }
 #scroll-down a {
