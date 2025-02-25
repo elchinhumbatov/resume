@@ -1,5 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Moved</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 2.5rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .redirecting {
+            margin-top: 20px;
+            font-size: 1rem;
+            opacity: 0.6;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        setTimeout(() => {
+            window.location.href = "https://elchinhumbatov.vercel.app";
+        }, 5000);
+    </script>
+</head>
+<body>
+    <h1>This site is out of date</h1>
+    <p>I have moved to a new website. You will be redirected shortly...</p>
+    <div class="spinner"></div>
+    <p class="redirecting">If you are not redirected, <a href="https://elchinhumbatov.vercel.app" style="color: #3498db;">click here</a>.</p>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Humbatov Elchin's cv resume site" />
@@ -787,4 +851,4 @@
     ></script>
     <script type="text/javascript" src="slick.min.js"></script>
   </body>
-</html>
+</html> -->
